@@ -12,17 +12,15 @@ body {
 /*** NAV ***/
 
 .topheader {
+   display: block;
    background-color: #050715;
-   padding-top: 3%;
-   padding-bottom: 3%;
+   padding-top: 2.5%;
+   padding-bottom: 2.5%;
    font-family: sans-serif;
-   font-size: 100%;
    text-align: left;
 }
 .li_enlaces {
-   display: block;
-   position:relative;
-   float: left;
+   display: inline-block;
    color: #FFFFFF;
    margin-left: 5%;
 }
@@ -31,9 +29,11 @@ body {
    list-style: none;
    color: #FFFFFF;
 }
+.enlaces:hover {
+   color: #5e3ad4;
+}
 .li_topheader {
-   position:relative;
-   float:left;
+   display: inline-block;
    text-decoration: none;
    list-style: none;
    margin-left: 5%;
@@ -41,8 +41,6 @@ body {
 .ul_topheader {
    display:none;
    position:absolute;
-   left:0;
-   width: max-content;
    color: #FFFFFF;
    text-decoration: none;
    list-style: none;
@@ -50,25 +48,31 @@ body {
 }
 .li_desplegable {
    background-color: #050715;
-   padding: 10%;
+   padding: 15%;
 }
 .desplegable {
    text-decoration: none;
    list-style: none;
    color: #FFFFFF;
 }
+.desplegable:hover {
+   color: #5e3ad4;
+}
+
 .li_topheader:hover > .ul_topheader {
    display:block;
 }
 .twitter {
-   position: absolute;
-   right: 1%;
+   display: flex;
+   float: right;
    list-style: none;
+   margin-right: 1%;
 }
 .facebook {
-   position: absolute;
-   right: 5%;
+   display: flex;
+   float: right;
    list-style: none;
+   margin-right: 1%;
 }
 
 
@@ -76,46 +80,53 @@ body {
 
 
 .header1 {
-   padding-left: 28%;
-   background-image: url("fondo.jpg");
-   background-size: 100%;
+   background-image: url("images/fondo.jpg");
+   background-attachment: fixed;
+   background-size: cover;
    color: #FFFFFF;
-   font-family: Tahoma;
+   font-family: sans-serif;
+   background-repeat: no-repeat;
 }
 
 .titulo {
    font-family: sans-serif;
    font-size: 150%;
-   padding-top: 11%;
-   text-align: left;
+   padding-top: 10%;
+   margin-left: 22%;
+   margin-right: 10%;
 }
 .mensaje {
    font-size: 450%;
-   padding-bottom: 32%;
-   text-align: left;
+   padding-bottom: 25%;
+   margin-left: 22%;
+   margin-right: 10%;
 }
 .boton {
    color: #FFFFFF;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    position: absolute;
-   margin-top: -21%;
+   margin-top: -22%;
    background-color: #5e3ad4;
    font-size: 100%;
    padding: 0.7% 2%;
-   align-items: center;
-   justify-content: center;
    border: black;
+   margin-left: 22%;
+   margin-right: 10%;
+}
+.boton:hover {
+   background-color: #412796;
 }
 
 main {
-   display: inline-flex;
+   display: inline-block;
    height: fit-content;
-   width: fit-content;
+   width: 100%;
 }
 
 /*** ASIDE ***/
 
-/* .aside {
+.aside {
+   clear: left;
    text-align: center;
    font-family: Tahoma;
    padding-top: 3%;
@@ -155,42 +166,55 @@ main {
    padding: 0.7% 2%;
    border: black;
 }
+.boton2:hover {
+   background-color: #412796;
+}
 hr {
    margin-left: 8%;
    margin-right: 8%;
 }
-.redestitulo {
-   text-align: center;
-   padding-bottom: 5%;
-   font-size: 200%;
-   font-family: Tahoma;
-   color: #5e3ad4;
-} */
+
 
 /*** SECTION ***/
 
-.fotoinfo {
-   background-image: url(fondosobre.jpg);
+.sobresection {
+   display: inline-flex;
    margin-top: 1.5%;
    margin-bottom: 1.5%;
-   padding-top: 16.5%;
-   padding-bottom: 16.5%;
-   background-size: 100%;
+   width: 100%;
 }
-.infosection {
-   height: fit-content;
-   width: fit-content;
-   margin-bottom: max-content;
-   padding-left: 14%;
-   padding-right: 14%;
+.fotoinfo {
+   width: 100%;
+   background-image: url("images/fondosobre.jpg");
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-right: 1.5%;
+}
+.infoarticle {
+   width: 60%;
+   padding: 10%;
    color: #FFFFFF;
    background-color: #050715;
    font-size: 120%;
    font-family: sans-serif;
 }
+.botonsobre {
+   margin-top: 5%;
+   color: #FFFFFF;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   background-color: #5e3ad4;
+   font-size: 75%;
+   padding: 2% 4%;
+   border: black;
+} 
+.botonsobre:hover {
+   background-color: #412796;
+}
+
+
 .tituloinfo {
    color: #FFFFFF;
-   padding-top: 40%;
    font-size: 200%;
    font-family: sans-serif;
 }
@@ -200,27 +224,37 @@ hr {
    font-family: sans-serif;
    padding-top: 5%;
    padding-bottom: 5%;
-   font-size: 120%;
+   font-size: 110%;
    text-align: center;
 }
+.redes {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 3%;
+}
+.redestitulo {
+   text-align: center;
+   margin-bottom: 5%;
+   font-size: 200%;
+   font-family: Tahoma;
+   color: #5e3ad4;
+}
 .instagram1 {
-   display: inline-block;
-   position: relative;
-   margin-left: 32%;
-   margin-right: 1%;
+   max-width: max-content;
+   margin-right: 3%;
 }
 .instagram2 {
-   display: inline-block;
-   position: relative;
+   max-width: max-content;
+   margin-left: 3%;
 }
 
 /*** FOOTER ***/
 
 .footer {
-   font-size: 90%;
+   font-size: 85%;
    color: #FFFFFF;
    background-color: black;
    text-align: center;
-   padding-top: 0.8%;
-   padding-bottom: 0.8%;
+   padding-top: 1%;
+   padding-bottom: 1%;
 }
