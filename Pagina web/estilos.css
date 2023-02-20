@@ -76,6 +76,63 @@ body {
 }
 
 
+
+.responsive {
+    height: 80px;
+    width: 100%;
+    background-color:red ;
+}
+.responsivelink {
+   position: absolute;
+   padding: 20px 5px;
+}
+.logo {
+   height: 40px;
+}
+.ul {
+   float: right;
+}
+.li_enlaces2 {
+   margin-top: 7%;
+   display: inline-block;
+}
+.enlaces2 {
+   color:#ffffff;
+   text-transform: uppercase;
+}
+.li_enlaces2.active, .li_enlaces2:hover{
+   background: #000090;
+   transition:.5s;
+}
+.checkbtn {
+   font-size: 30px;
+   color:#fff;
+   float: right;
+   line-height: 80px;
+   margin-right: 40px;
+   cursor: pointer;
+   display: none;
+}
+#check {
+   display: none;
+}
+
+
+
+nav ul li {
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+
+
+@media (max-width: 900px) {
+.responsive {
+   display: none;
+}
+}
+
+
 /*** HEADER ***/
 
 
