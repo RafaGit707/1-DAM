@@ -192,25 +192,24 @@
 
 
 
-
 .contacto {
    background-color: #5e3ad4;
    color: #FFFFFF;
    font-family: sans-serif;
-   padding-top: 5%;
-   padding-bottom: 5%;
-   font-size: 120%;
+   padding-top: 7%;
+   padding-bottom: 7%;
+   font-size: 110%;
    text-align: center;
 }
  
  /*** FOOTER ***/
  
  .footer {
-   font-size: 90%;
+   font-size: 85%;
    color: #FFFFFF;
    background-color: black;
    text-align: center;
-   padding-top: 0.8%;
-   padding-bottom: 0.8%;
+   padding-top: 1%;
+   padding-bottom: 1%;
 }
  

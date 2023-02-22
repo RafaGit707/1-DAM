@@ -3,6 +3,7 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   max-width: 100%;
 }
 body {
    background-color: #FFFFFF;
@@ -80,13 +81,15 @@ body {
 }
 #check {
    display: none;
+   transition: .5s;
 }
 
 @media (max-width: 900px) {
 .checkbtn {
    display: block;
    margin: 1.5% 0% 0% 4%;
-   transition: .5s;
+   transition-delay: 0ms;
+   transition: 1s;
    width: 0;
 }
 .fas {
@@ -94,19 +97,22 @@ body {
 }
 .ul_general {
    display: block;
+   transition-duration: 1.5s;
+   transition-delay: 0ms;
+   transition-property: all;
    margin-top: -100%;
-   margin-left: -100%;
-   transition: all .5s;
 }
 .li_topheader {
    width: 0;
 }
-.facebook {
-   display: none;
-}
 .twitter {
-   display: none;
+   transition: .5s;
 }
+.facebook {
+   transition: .5s;
+}
+
+
 #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
    display: block;
    margin: 6% 0 2% 3%;
@@ -115,17 +121,7 @@ body {
    transition: .5s;
    margin: 5% 0 0 6%;
 }
-.redes {
-   display: inline;
-}
 
-.instagram1 {
-   display: inline-flex;
-   justify-content: center;
-}
-.instagram2 {
-   display: inline-flex;
-}
 }
 
 /*** HEADER ***/
@@ -274,15 +270,15 @@ hr {
    background-color: #5e3ad4;
    color: #FFFFFF;
    font-family: sans-serif;
-   padding-top: 5%;
-   padding-bottom: 5%;
+   padding-top: 7%;
+   padding-bottom: 7%;
    font-size: 110%;
    text-align: center;
 }
 .redes {
-   display: flex;
+   display: inline-flex;
    justify-content: center;
-   background-color: aqua;
+   margin-bottom: 5%;
 }
 .redestitulo {
    text-align: center;
@@ -292,10 +288,14 @@ hr {
    color: #5e3ad4;
 }
 .instagram1 {
-   justify-content: center;
+   display: block;
+   text-align: center;
+   margin-bottom: 5%;
 }
 .instagram2 {
+   display: block;
    justify-content: center;
+   margin-bottom: 5%;
 }
 
 
