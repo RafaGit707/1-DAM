@@ -38,13 +38,14 @@ body {
    list-style: none;
    margin-left: 5%;
 }
-.ul_topheader {
+.ul_desplegable {
    display:none;
    position:absolute;
    color: #FFFFFF;
    text-decoration: none;
    list-style: none;
    padding-top: 1em;
+   padding-right: -10%;
 }
 .li_desplegable {
    background-color: #050715;
@@ -59,7 +60,7 @@ body {
    color: #5e3ad4;
 }
 
-.li_topheader:hover > .ul_topheader {
+.li_topheader:hover > .ul_desplegable {
    display:block;
 }
 .twitter {
@@ -77,29 +78,28 @@ body {
 .checkbtn {
    display: none;
 }
-.logo {
-   display: none;
-}
 #check {
    display: none;
 }
 
 @media (max-width: 900px) {
 .checkbtn {
-   display: inline;
-   margin-left: 5%;
+   display: block;
+   margin: 1.5% 0% 0% 4%;
+   transition: .5s;
+   width: 0;
 }
 .fas {
    color:#FFFFFF;
 }
-.li_enlaces {
-   display: none;
+.ul_general {
+   display: block;
+   margin-top: -100%;
+   margin-left: -100%;
+   transition: all .5s;
 }
 .li_topheader {
-   display: none;
-}
-.ul_topheader {
-   margin-left: 28%;
+   width: 0;
 }
 .facebook {
    display: none;
@@ -107,17 +107,26 @@ body {
 .twitter {
    display: none;
 }
-.fas:hover .li_enlaces, .li_topheader {
+#check:checked ~ .ul_general, .li_enlaces, .li_topheader {
+   display: block;
+   margin: 6% 0 2% 3%;
+}
+#check:checked ~ .checkbtn {
+   transition: .5s;
+   margin: 5% 0 0 6%;
+}
+.redes {
    display: inline;
 }
-.fas:hover, .fas {
-   display: none;
-}
-.instagram1 {
-   
-}
-}
 
+.instagram1 {
+   display: inline-flex;
+   justify-content: center;
+}
+.instagram2 {
+   display: inline-flex;
+}
+}
 
 /*** HEADER ***/
 
@@ -273,7 +282,7 @@ hr {
 .redes {
    display: flex;
    justify-content: center;
-   margin-bottom: 3%;
+   background-color: aqua;
 }
 .redestitulo {
    text-align: center;
@@ -283,13 +292,12 @@ hr {
    color: #5e3ad4;
 }
 .instagram1 {
-   max-width: max-content;
-   margin-right: 3%;
+   justify-content: center;
 }
 .instagram2 {
-   max-width: max-content;
-   margin-left: 3%;
+   justify-content: center;
 }
+
 
 /*** FOOTER ***/
 
