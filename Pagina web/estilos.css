@@ -87,40 +87,38 @@ body {
 @media (max-width: 900px) {
 .checkbtn {
    display: block;
-   margin: 1.5% 0% 0% 4%;
+   margin: 1% 0% 0% 4%;
    transition-delay: 0ms;
    transition: 1s;
    width: 0;
 }
+
 .fas {
    color:#FFFFFF;
 }
 .ul_general {
    display: block;
-   transition-duration: 1.5s;
-   transition-delay: 0ms;
-   transition-property: all;
    margin-top: -100%;
 }
 .li_topheader {
    width: 0;
 }
 .twitter {
-   transition: .5s;
+   margin-top: -50%;
 }
 .facebook {
-   transition: .5s;
+   margin-top: -50%;
+   margin-right: calc(50px + 2%);
 }
-
-
 #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
    display: block;
    margin: 6% 0 2% 3%;
 }
-#check:checked ~ .checkbtn {
+#check:checked ~ .checkbtn{
    transition: .5s;
    margin: 5% 0 0 6%;
 }
+
 
 }
 
