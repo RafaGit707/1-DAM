@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 100%;
  }
 
  body {
@@ -40,13 +41,14 @@
    list-style: none;
    margin-left: 5%;
 }
-.ul_topheader {
+.ul_desplegable {
    display:none;
    position:absolute;
    color: #FFFFFF;
    text-decoration: none;
    list-style: none;
    padding-top: 1em;
+   padding-right: -10%;
 }
 .li_desplegable {
    background-color: #050715;
@@ -60,20 +62,34 @@
 .desplegable:hover {
    color: #5e3ad4;
 }
-.li_topheader:hover > .ul_topheader {
+
+.li_topheader:hover > .ul_desplegable {
    display:block;
 }
 .twitter {
    display: flex;
    float: right;
    list-style: none;
-   margin-right: 1%;
+   margin-right: 1.5%;
 }
 .facebook {
    display: flex;
    float: right;
    list-style: none;
-   margin-right: 1%;
+   margin-right: 1.5%;
+}
+.twitter2 {
+   display: none;
+}
+.facebook2 {
+   display: none;
+}
+.checkbtn {
+   display: none;
+}
+#check {
+   display: none;
+   transition: .5s;
 }
  
  /*** ASIDE ***/
@@ -213,3 +229,144 @@
    padding-bottom: 1%;
 }
  
+ /*** MEDIA ***/
+
+@media (max-width: 900px) {
+   .checkbtn {
+      display: block;
+      margin: 0% 0% 0% 4%;
+      transition-delay: 0ms;
+      transition: 1s;
+      width: 0;
+   }
+   .topheader {
+      padding-top: 4%;
+      padding-bottom: 6%;
+      transition-delay: 0ms;
+      transition: 1s;
+   }
+   .fas {
+      color:#FFFFFF;
+   }
+   .twitter {
+      display: none;
+   }
+   .facebook {
+      display: none;
+   }
+   .twitter2 {
+      display: inline;
+      float: right;
+      margin-top: 0.5%;
+      margin-right: 2%;
+   }
+   .facebook2 {
+      display: inline;
+      float: right;
+      margin-top: 0.5%;
+      margin-right: 2.5%;
+   }
+   
+   .ul_general {
+      display: block;
+      margin-top: -200%;
+   }
+   .li_topheader {
+      width: 0;
+   }
+   #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
+      display: block;
+      margin: 6% 0 2% 3%;
+   }
+   #check:checked ~ .checkbtn {
+      transition: .5s;
+      margin: 5% 0 0 6%;
+   }
+   #check:checked ~ .desplegable, .li_desplegable, .ul_desplegable {
+      background-color:#070a1f;
+   }
+   }
+   @media (max-width: 800px) {
+   .topheader {
+      zoom: 90%;
+   }
+   .header1 {
+      zoom: 80%;
+   }
+   .sobresection {
+      zoom: 90%;
+   }
+   .aside {
+      zoom: 90%;
+   }
+   .twitter2 {
+      zoom: 90%;
+   }
+   .facebook2 {
+      zoom: 90%;
+   }
+   .contacto {
+      zoom: 90%;
+   }
+   .footer {
+      zoom: 90%;
+   }
+   }
+   @media (max-width: 650px) {
+   .topheader {
+      zoom: 80%;
+   }
+   .header1 {
+      zoom: 70%;
+   }
+   .sobresection {
+      zoom: 75%;
+   }
+   .aside {
+      zoom: 80%;
+   }
+   .checkbtn {
+      zoom: 80%;
+   }
+   .twitter2 {
+      zoom: 75%;
+   }
+   .facebook2 {
+      zoom: 75%;
+   }
+   .contacto {
+      zoom: 80%;
+   }
+   .footer {
+      zoom: 80%;
+   }
+   }
+   @media (max-width: 500px) {
+   .topheader {
+      zoom: 75%;
+   }
+   .header1 {
+      zoom: 60%;
+   }
+   .sobresection {
+      zoom: 60%;
+   }
+   .aside {
+      zoom: 70%;
+   }
+   .checkbtn {
+      zoom: 70%;
+   }
+   .twitter2 {
+      zoom: 65%;
+   }
+   .facebook2 {
+      zoom: 65%;
+   }
+   .contacto {
+      zoom: 70%;
+   }
+   .footer {
+      zoom: 70%;
+   }
+   }
