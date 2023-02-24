@@ -51,7 +51,7 @@ public class trenes {
       tren3.enganchaVagon(150,140,"Madera");
 
       System.out.println();
-      
+   
       //mostrar trenes 
       System.out.println("Tren 1: " + tren1);
       System.out.println("Tren 2: " + tren2);

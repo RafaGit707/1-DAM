@@ -13,7 +13,7 @@ class Locomotora {
        this.potencia = potencia;
        this.antiguedad = 0;
    }
-
+   
    public Locomotora(String matricula, int potencia, int antiguedad) {
        this.matricula = matricula;
        this.potencia = potencia;

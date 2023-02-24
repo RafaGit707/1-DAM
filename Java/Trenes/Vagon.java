@@ -14,7 +14,6 @@ public class Vagon {
        this.cargaActual = cargaActual;
        this.tipoMercancia = tipoMercancia;
    }
-
    
    public int getId() {
        return id;

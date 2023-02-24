@@ -15,7 +15,7 @@ class Maquinista {
        this.sueldo = sueldo;
        this.rango = "Ayudante";
    }
-
+   
    public Maquinista(String nombre, String dni,double sueldo, String rango)
    {
       this.nombre = nombre;
