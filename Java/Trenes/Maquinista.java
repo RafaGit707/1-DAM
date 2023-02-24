@@ -2,21 +2,18 @@ package Trenes;
 
 class Maquinista {
    
-   String nombre;
-   String dni;
-   double sueldo;
-   String rango;
+   private String nombre;
+   private String dni;
+   private double sueldo;
+   private String rango;
 
    //CREAMOS LOS CONSTRUCTORES
 
-   public Maquinista()
-   {
-       nombre = "Desconocido";
-   }
-
-   public Maquinista(String nombre)
-   {
-      this.nombre = nombre;
+   public Maquinista(String nombre, String dni, double sueldo) {
+       this.nombre = nombre;
+       this.dni = dni;
+       this.sueldo = sueldo;
+       this.rango = "Ayudante";
    }
 
    public Maquinista(String nombre, String dni,double sueldo, String rango)
@@ -26,8 +23,29 @@ class Maquinista {
       this.sueldo = sueldo;
       this.rango = rango;
    }
-   void setRango(String rango)
+    public String getNombre()
     {
-        setRango(rango);
+        return nombre;
     }
+
+    public String getDni()
+    {
+        return dni;
+    }
+
+    public double getSueldo()
+    {
+        return sueldo;
+    }
+
+    public String getRango()
+    {
+        return rango;
+    }
+
+    public void setRango(String rango)
+    {
+        this.rango = rango;
+    }
+    
 }
