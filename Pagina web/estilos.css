@@ -76,6 +76,12 @@ body {
    list-style: none;
    margin-right: 1%;
 }
+.twitter2 {
+   display: none;
+}
+.facebook2 {
+   display: none;
+}
 .checkbtn {
    display: none;
 }
@@ -92,23 +98,29 @@ body {
    transition: 1s;
    width: 0;
 }
-
 .fas {
    color:#FFFFFF;
 }
 .ul_general {
    display: block;
-   margin-top: -100%;
+   margin-top: -200%;
 }
 .li_topheader {
    width: 0;
 }
 .twitter {
-   margin-top: -50%;
+   display: none;
 }
 .facebook {
-   margin-top: -50%;
-   margin-right: calc(50px + 2%);
+   display: none;
+}
+.twitter2 {
+   display: inline;
+   margin-right: 1%;
+}
+.facebook2 {
+   display: inline;
+   margin-right: 1%;
 }
 #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
    display: block;
