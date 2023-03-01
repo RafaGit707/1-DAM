@@ -1,42 +1,29 @@
-public class Rectangulo extends FiguraGeometrica {
+package Java;
 
-   //Atributos
-   private double base;
-   private double altura;
+import java.util.Scanner;
+
+public class rectangulo {
+
+   public static void main(String[] args) {
+
+   Scanner sc = new Scanner(System.in);
+
+      System.out.println("Altura del rectantgulo");
+      int altura = sc.nextInt();
+
+      System.out.println("Anchura del rectantgulo");
+      int anchura = sc.nextInt();
+
+      for(int contadorAltura = 0; contadorAltura < altura; contadorAltura++)
+      {
+         for(int contadorAnchura = 0; contadorAnchura < anchura; contadorAnchura++)
+         {
+            System.out.print("x");
+         }
+         //salto de linea
+         System.out.println("");
+      }
    
-   //Constructor
-   public Rectangulo(double base, double altura, String color){
-   super(color);
-   this.base = base;
-   this.altura = altura;
-   }
-   
-   //Métodos
-   public double perimetro(){
-   
-   double perimetro = 0;
-   perimetro = 2 * (this.base + this.altura);
-   
-   return perimetro;
-   }
-   public double area(){
-   
-   double area = 0;
-   area = this.base * this.altura;
-   
-   return area;
-   }
-   
-   @Override
-   public String toString(){
-   
-   String cadena = "";
-   cadena += "\n--Rectangula--";
-   cadena += "\n Base: " + this.base;
-   cadena += "\n Altura: " + this.altura;
-   cadena += super.toString();
-   
-   return cadena;
-   }
+   sc.close();
 }
-
+}
