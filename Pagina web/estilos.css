@@ -93,11 +93,16 @@ body {
 @media (max-width: 900px) {
 .checkbtn {
    display: block;
-   margin: 1% 0% 0% 4%;
+   margin: 0% 0% 0% 4%;
    transition-delay: 0ms;
    transition: 1s;
    width: 0;
 }
+.topheader {
+   padding-top: 4%;
+   padding-bottom: 5.5%;
+}
+
 .fas {
    color:#FFFFFF;
 }
@@ -116,10 +121,12 @@ body {
 }
 .twitter2 {
    display: inline;
+   float: right;
    margin-right: 1%;
 }
 .facebook2 {
    display: inline;
+   float: right;
    margin-right: 1%;
 }
 #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
@@ -130,7 +137,6 @@ body {
    transition: .5s;
    margin: 5% 0 0 6%;
 }
-
 
 }
 
@@ -318,4 +324,125 @@ hr {
    text-align: center;
    padding-top: 1%;
    padding-bottom: 1%;
+}
+
+/*** @media ZOOM ***/
+
+@media (max-width: 750px) {
+
+.fas {
+   zoom: 90%;
+}
+.twitter2 {
+   zoom: 90%;
+}
+.facebook2 {
+   zoom: 90%;
+}
+.ul_general {
+   zoom: 90%;
+}
+.header1 {
+   zoom: 85%;
+}
+.sobresection {
+   zoom: 90%;
+}
+.clases {
+   zoom: 90%;
+}
+.clases_mid {
+   zoom: 90%;
+}
+.clasestitulo {
+   zoom: 90%;
+}
+.redestitulo {
+   zoom: 90%;
+}
+.contacto {
+   zoom: 90%;
+}
+.footer {
+   zoom: 90%;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.twitter2 {
+   zoom: 85%;
+}
+.facebook2 {
+   zoom: 85%;
+}
+.ul_general {
+   zoom: 80%;
+}
+.header1 {
+   zoom: 70%;
+}
+.sobresection {
+   zoom: 80%;
+}
+.clases {
+   zoom: 75%;
+}
+.clases_mid {
+   zoom: 75%;
+}
+.clasestitulo {
+   zoom: 75%;
+}
+.redestitulo {
+   zoom: 75%;
+}
+.contacto {
+   zoom: 80%;
+}
+.footer {
+   zoom: 80%;
+}
+   
+}
+
+@media (max-width: 500px) {
+.fas {
+   zoom: 80%;
+}
+.twitter2 {
+   zoom: 75%;
+}
+.facebook2 {
+   zoom: 75%;
+}
+.ul_general {
+   zoom: 75%;
+}
+.header1 {
+   zoom: 60%;
+}
+.sobresection {
+   zoom: 70%;
+}
+.clases {
+   zoom: 65%;
+}
+.clases_mid {
+   zoom: 65%;
+}
+.clasestitulo {
+   zoom: 65%;
+}
+.redestitulo {
+   zoom: 65%;
+}
+.contacto {
+   zoom: 70%;
+}
+.footer {
+   zoom: 70%;
+}
+   
 }
