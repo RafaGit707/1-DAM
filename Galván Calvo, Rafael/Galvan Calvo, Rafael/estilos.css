@@ -20,10 +20,6 @@ body {
    font-family: sans-serif;
    text-align: left;
 }
-.ul_general {
-   margin-left: 2%;
-   margin-right: 2%;
-}
 .li_enlaces {
    display: inline-block;
    color: #FFFFFF;
