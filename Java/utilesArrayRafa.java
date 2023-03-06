@@ -1,66 +1,72 @@
 package Java;
 
-public class utilesArrayRafa {
-   
-   public static void main(String[] args) {
-      
-      package ArraysVectores;
-
 import javax.swing.text.Utilities;
 
+public class UtilesArrayRafa {
+
+   static int[] limpiar()
+   {
+      int[] array = null;
+
+      return array;
+   }
+
+   public static void main(String[] args) {
+      
+      int[] numeros = new int[10];
+      numeros = limpiar();
+      
+   }
+
+
+}
+
 public class EjercicioArrays {
-    
-    public static void main(String[] args) {
         
         int[] array = null;
 
-        UtilesArrayAlfonso.rellenar(10);
+        UtilesArrayRafa.rellenar(10);
 
-        UtilesArrayAlfonso.imprimir(array);
+        UtilesArrayRafa.imprimir(array);
 
-        array =UtilesArrayAlfonso.limpiar();
+        array = UtilesArrayRafa.limpiar();
 
-        array =UtilesArrayAlfonso.insertarAlPrincipio(array, 10);
+        array = UtilesArrayRafa.insertarAlPrincipio(array, 10);
 
-        array =UtilesArrayAlfonso.insertarAlPrincipio(array, 20);
+        array = UtilesArrayRafa.insertarAlPrincipio(array, 20);
 
-        array =UtilesArrayAlfonso.insertarAlPrincipio(array, 30);
+        array = UtilesArrayRafa.insertarAlPrincipio(array, 30);
 
-        array =UtilesArrayAlfonso.insertarAlPrincipio(array, 40);
+        array = UtilesArrayRafa.insertarAlPrincipio(array, 40);
 
-        array =UtilesArrayAlfonso.insertarAlFinal(array, 5);
+        array = UtilesArrayRafa.insertarAlFinal(array, 5);
 
-        boolean ordenado = UtilesArrayAlfonso.estaOrdenado(array);
+        boolean ordenado = UtilesArrayRafa.estaOrdenado(array);
 
         System.out.println("Esta ordenado: " + ordenado);
 
-        UtilesArrayAlfonso.imprimir(array);
+        UtilesArrayRafa.imprimir(array);
 
-        array =UtilesArrayAlfonso.eliminarPrimero(array);
+        array = UtilesArrayRafa.eliminarPrimero(array);
 
-        array =UtilesArrayAlfonso.eliminar(array, 40);
+        array = UtilesArrayRafa.eliminar(array, 40);
 
-        array =UtilesArrayAlfonso.ordenar(array);
+        array = UtilesArrayRafa.ordenar(array);
 
-        array =UtilesArrayAlfonso.insertarOrdenado(array, 15);
+        array = UtilesArrayRafa.insertarOrdenado(array, 15);
 
-        UtilesArrayAlfonso.imprimir(array);
+        UtilesArrayRafa.imprimir(array);
         
-        int posicion30 =UtilesArrayAlfonso.buscar(array, 30);
+        int posicion30 = UtilesArrayRafa.buscar(array, 30);
 
         System.out.println("El elemento 30 está en la posicion: " + posicion30);
 
-        int posicion99 =UtilesArrayAlfonso.buscar(array, 99);
+        int posicion99 = UtilesArrayRafa.buscar(array, 99);
 
         System.out.println("El elemento 99 está en la posicion: " + posicion99);
 
-        array =UtilesArrayAlfonso.partirPor(array, 1,3);
+        array = UtilesArrayRafa.partirPor(array, 1,3);
 
-        UtilesArrayAlfonso.imprimir(array);
+        UtilesArrayRafa.imprimir(array);
 
     }
-}
-
-   }
-
-}
