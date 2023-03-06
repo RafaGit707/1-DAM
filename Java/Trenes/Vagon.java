@@ -52,3 +52,4 @@ public class Vagon {
        return "V" + id + " - " + cargaActual + "kgs de " + cargaMaxima + " " + tipoMercancia;
    }
 }
+

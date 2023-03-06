@@ -28,3 +28,4 @@ public class Mecanico {
       return nombre + " (Tlf: " + tlf + ") especialista en " + especialidad;
   }
 }
+

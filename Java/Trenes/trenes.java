@@ -65,6 +65,7 @@ public class trenes {
 
       System.out.println();
       System.out.println("Tren 1");
+      
       tren1.muestraInformacion();
 
       System.out.println();
