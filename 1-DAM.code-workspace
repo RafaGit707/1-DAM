@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../Documentos/Programación/Practicas"
+		},
+		{
+			"path": "../Documentos/Programación/ejerciciosJava"
+		},
+		{
+			"path": "../Documentos/Programación/cadena"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.explorerKind": "external",
+		"liveServer.settings.multiRootWorkspaceName": "1ºDAM"
+	}
+}
