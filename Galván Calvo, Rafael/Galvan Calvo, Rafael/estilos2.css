@@ -1,0 +1,429 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+   background-color: #FFFFFF;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ 
+/*** MENU TOPHEADER ***/
+
+.topheader {
+   display: block;
+   background-color: #050715;
+   padding-top: 2.5%;
+   padding-bottom: 2.5%;
+   font-family: sans-serif;
+   text-align: left;
+}
+.li_enlaces {
+   display: inline-block;
+   color: #FFFFFF;
+   margin-left: 5%;
+}
+.enlaces {
+   text-decoration: none;
+   list-style: none;
+   color: #FFFFFF;
+}
+.enlaces:hover {
+   color: #5e3ad4;
+}
+.li_topheader {
+   display: inline-block;
+   text-decoration: none;
+   list-style: none;
+   margin-left: 5%;
+}
+.ul_desplegable {
+   display:none;
+   position:absolute;
+   color: #FFFFFF;
+   text-decoration: none;
+   list-style: none;
+   padding-top: 1em;
+   padding-right: -10%;
+}
+.li_desplegable {
+   background-color: #050715;
+   padding: 15%;
+}
+.desplegable {
+   text-decoration: none;
+   list-style: none;
+   color: #FFFFFF;
+}
+.desplegable:hover {
+   color: #5e3ad4;
+}
+
+.li_topheader:hover > .ul_desplegable {
+   display:block;
+}
+.twitter {
+   display: flex;
+   float: right;
+   list-style: none;
+   margin-right: 1%;
+}
+.facebook {
+   display: flex;
+   float: right;
+   list-style: none;
+   margin-right: 1%;
+}
+.twitter2 {
+   display: none;
+}
+.facebook2 {
+   display: none;
+}
+.checkbtn {
+   display: none;
+}
+#check {
+   display: none;
+   transition: .5s;
+}
+ 
+ /*** ASIDE CLASES ***/
+ 
+ .aside {
+   background-color: #050715;
+   text-align: center;
+   font-family: Tahoma;
+   padding-top: 3%;
+   padding-bottom: 8%;
+
+ }
+ .clasestitulo {
+   display: inline-block;
+   padding-bottom: 5%;
+   font-size: 240%;
+   font-family: Tahoma;
+   color: #FFFFFF;
+ }
+ .clases {
+   display: inline-block;
+   padding-bottom: 2.5%;
+   color: #FFFFFF;
+   font-size: 150%;
+ }
+ .clases_mid {
+   margin-top: 2.5%;
+   display: inline-block;
+   position: relative;
+   left: 7%;
+   color: #FFFFFF;
+   font-size: 90%;
+   text-align: left;
+ }
+ .boton2 {
+   margin-left: 12%;
+   display: inline-block;
+   color: #FFFFFF;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   background-color: #5e3ad4;
+   font-size: 85%;
+   padding: 0.5% 1.5%;
+   border: black;
+ }
+ .boton2:hover {
+   background-color: #412796;
+}
+ hr {
+   margin-left: 20%;
+   margin-right: 20%;
+}
+ 
+ /*** SECTION SOBRE 1 ***/
+ 
+ .section {
+   width: 100%;
+}
+.sobresection {
+   display: inline-flex;
+   margin-top: 1.5%;
+   margin-bottom: 1.5%;
+   width: 100%;
+}
+.fotoinfo {
+   width: 100%;
+   background-image: url("images/fondosobre.jpg");
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-right: 1.5%;
+}
+.tituloinfo {
+   color: #FFFFFF;
+   font-size: 200%;
+   font-family: sans-serif;
+}
+.infoarticle {
+   float: right;
+   width: 60%;
+   padding: 10%;
+   color: #FFFFFF;
+   background-color: #050715;
+   font-size: 120%;
+   font-family: sans-serif;
+}
+
+ /*** SECTION SOBRE 2 ***/
+
+.sobresection2 {
+   display: flex;
+   margin-bottom: 1.5%;
+   width: 100%;
+}
+.fotoinfo2 {
+   display: inline;
+   background-image: url("images/trainer1.png");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   width: 40%;
+   margin-bottom: 5%;
+}
+.tituloinfo2 {
+   color: #5e3ad4;
+   font-size: 200%;
+   font-family: sans-serif;
+}
+.infoarticle2 {
+   display: inline;
+   float: left;
+   width: 60%;
+   padding: 10%;
+   color: #5e3ad4;
+   font-size: 120%;
+   font-family: sans-serif;
+   margin-right: 1.5%;
+   margin-bottom: 15%;
+   box-sizing: border-box;
+}
+
+ /*** SECTION PLANES ***/
+
+.planesection {
+   border: aqua;
+}
+.plan1 {
+   border: aqua;
+}
+.plan2 {
+   border: aqua;
+}
+.plan3 {
+   border: aqua;
+}
+
+ /*** SECTION CONTACTO ***/
+
+.contacto {
+   background-color: #5e3ad4;
+   color: #FFFFFF;
+   font-family: sans-serif;
+   padding-top: 7%;
+   padding-bottom: 7%;
+   font-size: 110%;
+   text-align: center;
+}
+
+ /*** FOOTER ***/
+ 
+ .footer {
+   font-size: 85%;
+   color: #FFFFFF;
+   background-color: black;
+   text-align: center;
+   padding-top: 1%;
+   padding-bottom: 1%;
+}
+
+/*** @media RESPONSIVE ***/
+
+@media (max-width: 900px) {
+   .checkbtn {
+      display: block;
+      margin: 0% 0% 0% 4%;
+      transition-delay: 0ms;
+      transition: 1s;
+      width: 0;
+   }
+   .topheader {
+      padding-top: 4%;
+      padding-bottom: 5.5%;
+   }
+   
+   .fas {
+      color:#FFFFFF;
+   }
+   .ul_general {
+      display: block;
+      margin-top: -200%;
+   }
+   .li_topheader {
+      width: 0;
+   }
+   .twitter {
+      display: none;
+   }
+   .facebook {
+      display: none;
+   }
+   .twitter2 {
+      display: inline;
+      float: right;
+      margin-right: 1%;
+   }
+   .facebook2 {
+      display: inline;
+      float: right;
+      margin-right: 1%;
+   }
+   #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
+      display: block;
+      margin: 6% 0 2% 3%;
+   }
+   #check:checked ~ .checkbtn{
+      transition: .5s;
+      margin: 5% 0 0 6%;
+   }
+   
+   }
+ 
+/*** @media ZOOM ***/
+
+@media (max-width: 750px) {
+
+   .fas {
+      zoom: 90%;
+   }
+   .twitter2 {
+      zoom: 90%;
+   }
+   .facebook2 {
+      zoom: 90%;
+   }
+   .ul_general {
+      zoom: 90%;
+   }
+   .header1 {
+      zoom: 85%;
+   }
+   .sobresection {
+      zoom: 90%;
+   }
+   .sobresection2 {
+      zoom: 90%;
+   }
+   .clases {
+      zoom: 90%;
+   }
+   .clases_mid {
+      zoom: 90%;
+   }
+   .clasestitulo {
+      zoom: 90%;
+   }
+   .redestitulo {
+      zoom: 90%;
+   }
+   .contacto {
+      zoom: 90%;
+   }
+   .footer {
+      zoom: 90%;
+   }
+   
+   }
+   
+   @media (max-width: 600px) {
+   
+   .twitter2 {
+      zoom: 85%;
+   }
+   .facebook2 {
+      zoom: 85%;
+   }
+   .ul_general {
+      zoom: 80%;
+   }
+   .header1 {
+      zoom: 70%;
+   }
+   .sobresection {
+      zoom: 80%;
+   }
+   .sobresection2 {
+      zoom: 80%;
+   }
+   .clases {
+      zoom: 75%;
+   }
+   .clases_mid {
+      zoom: 75%;
+   }
+   .clasestitulo {
+      zoom: 75%;
+   }
+   .redestitulo {
+      zoom: 75%;
+   }
+   .contacto {
+      zoom: 80%;
+   }
+   .footer {
+      zoom: 80%;
+   }
+      
+   }
+   
+   @media (max-width: 500px) {
+   .fas {
+      zoom: 80%;
+   }
+   .twitter2 {
+      zoom: 75%;
+   }
+   .facebook2 {
+      zoom: 75%;
+   }
+   .ul_general {
+      zoom: 75%;
+   }
+   .header1 {
+      zoom: 60%;
+   }
+   .sobresection {
+      zoom: 70%;
+   }
+   .sobresection2 {
+      zoom: 70%;
+   }
+   .clases {
+      zoom: 65%;
+   }
+   .clases_mid {
+      zoom: 65%;
+   }
+   .clasestitulo {
+      zoom: 65%;
+   }
+   .redestitulo {
+      zoom: 65%;
+   }
+   .contacto {
+      zoom: 70%;
+   }
+   .footer {
+      zoom: 70%;
+   }
+      
+   }
