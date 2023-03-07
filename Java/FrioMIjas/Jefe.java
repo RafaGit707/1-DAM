@@ -1,19 +1,19 @@
 public class Jefe {
 
-   String nombre;
-   String apellido;
-   int edad;
-   int salario;
-   String dni;
+   private String nombre;
+   private String apellidos;
+   private int edad;
+   private int sueldo;
+   private String dni;
 
    //CREAMOS LOS CONSTRUCTORES
 
-   public Jefe(String nombre, String apellido, int edad, int salario, String dni)
+   public Jefe (String nombre, String apellidos, int edad, int sueldo, String dni)
    {
       this.nombre = nombre;
-      this.apellido = apellido;
+      this.apellidos = apellidos;
       this.edad = edad;
-      this.salario = salario;
+      this. sueldo =  sueldo;
       this.dni = dni;
    }
 

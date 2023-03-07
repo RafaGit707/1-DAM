@@ -1,3 +1,7 @@
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
+
 public class FrioMijas {
 
     public static void main(String[] args) {
