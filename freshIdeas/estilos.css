@@ -1,0 +1,166 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body {
+   margin-left: 20%;
+   margin-right: 20%;
+   background-color: #ff7b2d;
+   font-family:
+}
+
+.title {
+   margin-top: 0.5%;
+   color: #FFFFFF;
+   font-family: sans-serif;
+   padding-bottom: 1%;
+   padding-top: 1%;
+}
+
+/*** TOPHEADER MENU NAV ***/
+
+.listenlaces {
+   padding-left: 2%;
+   display: inline-block;
+}
+
+.topheader {
+   border-radius: 10px;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   background-color: #2e2e2e;
+   font-family: sans-serif;
+}
+.enlaces {
+   display: inline-block;
+   color: #FFFFFF;
+   text-decoration: none;
+}
+.enlaces:hover {
+   color: #00c3ff;
+}
+
+/*** HEADER ***/
+
+.header1 {
+   border-radius: 10px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   background: linear-gradient(#c2f9ff,#00b7ff, #c2f9ff);
+   text-align: left;
+   font-family: Tahoma;
+   padding: 3%;
+}
+
+/*** MAIN ***/
+
+main {
+   display: inline-flex;
+   height: fit-content;
+   width: fit-content;
+}
+
+/*** ASIDE BARRA LATERAL ***/
+
+aside.categorias {
+   height: fit-content;
+   border-radius: 10px;
+   margin-bottom: 5px;
+   background-color: #ffffff;
+   padding-right: 4%;
+   font-variant: small-caps;
+}
+.ul_categorias {
+   margin-left: 20%;
+   color: #00c3ff;
+}
+.h4_categorias {
+   border-radius: 10px;
+   padding: 3%;
+   background-color: #b5ecff;
+}
+.list_h4 {
+   padding-left: 5%;
+   padding-top: 5%;
+   list-style: none;
+}
+.secciones {
+   color: #000000;
+}
+.hr_secciones {
+   border: none;
+   border-top: 1px dotted #00c3ff;
+}
+
+/*** SECTION CAMISETAS ***/
+
+section.principal {
+   height: fit-content;
+   width: fit-content;
+   margin-left: 5px;
+   margin-bottom: 5px;
+   border-radius: 10px;
+   background-color: #ffffff;
+   padding: 3%;
+}
+.h3_principal {
+   border-radius: 10px;
+   padding: 2%;
+   background-color: #b5ecff;
+}
+.camisetasbloque {
+   text-align: center;
+}
+.camisetas {
+   display: inline-block;
+   margin: 3%;
+   border-radius: 5px;
+   border: solid 10px #01a0bc;
+   padding: 2%;
+}
+.bordeimg {
+   list-style:none;
+}
+.images {
+   list-style:none;
+}
+.textimg {
+   color: #00b7ff;
+}
+.textimg:hover {
+   color: red;
+}
+.buynow {
+   padding-top: 10%;
+}
+
+
+
+article p.texto {
+   padding-top: 2%;
+}
+
+.cart {
+   padding-top: 5%;
+}
+.payments {
+   padding-top: 5%;
+   float: right;
+}
+
+/*** FOOTER ***/
+
+footer p.footer {
+   border-radius: 10px;
+   font-size: 90%;
+   color: #f2f2f2;
+   background-color: #2e2e2e;
+   text-align: right;
+   padding: 1%;
+}
+
+footer a {
+   color: grey;
+}
