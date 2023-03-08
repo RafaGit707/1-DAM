@@ -253,11 +253,15 @@ hr {
    display: inline;
    text-align: center;
    margin-bottom: 8%;
+   margin-left: 3%;
+   margin-right: 3%;
 }
 .instagram2 {
    display: inline;
    justify-content: center;
    margin-bottom: 8%;
+   margin-left: 3%;
+   margin-right: 3%;
 }
 
 /*** SECTION CONTACTO ***/
@@ -285,59 +289,63 @@ hr {
 
 /*** @media RESPONSIVE ***/
 
+/*** RESPONSIVE PARA TABLET ***/
+
 @media (max-width: 1024px) {
-   .checkbtn {
-      display: block;
-      margin: 0% 0% 0% 4%;
-      transition-delay: 0ms;
-      transition: 1s;
-      width: 0;
-   }
-   .topheader {
-      padding-top: 4%;
-      padding-bottom: 5.5%;
-   }
+
+.checkbtn {
+   display: block;
+   margin: 0% 0% 0% 4%;
+   transition-delay: 0ms;
+   transition: 1s;
+   width: 0;
+}
+.topheader {
+   padding-top: 4%;
+   padding-bottom: 5.5%;
+}
+.fas {
+   color:#FFFFFF;
+}
+.ul_general {
+   display: block;
+   margin-top: -200%;
+}
+.li_topheader {
+   width: 0;
+}
+.twitter {
+   display: none;
+}
+.facebook {
+   display: none;
+}
+.twitter2 {
+   display: inline;
+   float: right;
+   margin-right: 1%;
+}
+.facebook2 {
+   display: inline;
+   float: right;
+   margin-right: 1%;
+}
+#check:checked ~ .ul_general, .li_enlaces, .li_topheader {
+   display: block;
+   margin: 6% 0 2% 3%;
+}
+#check:checked ~ .checkbtn{
+   transition: .5s;
+   margin: 5% 0 0 6%;
+}
    
-   .fas {
-      color:#FFFFFF;
-   }
-   .ul_general {
-      display: block;
-      margin-top: -200%;
-   }
-   .li_topheader {
-      width: 0;
-   }
-   .twitter {
-      display: none;
-   }
-   .facebook {
-      display: none;
-   }
-   .twitter2 {
-      display: inline;
-      float: right;
-      margin-right: 1%;
-   }
-   .facebook2 {
-      display: inline;
-      float: right;
-      margin-right: 1%;
-   }
-   #check:checked ~ .ul_general, .li_enlaces, .li_topheader {
-      display: block;
-      margin: 6% 0 2% 3%;
-   }
-   #check:checked ~ .checkbtn{
-      transition: .5s;
-      margin: 5% 0 0 6%;
-   }
-   
-   }
+}
 
 /*** @media ZOOM ***/
 
-@media (max-width: 800px) {
+/*** RESPONSIVE PARA TABLET MINI ***/
+
+@media (max-width: 850px) {
 
 .fas {
    zoom: 90%;
@@ -396,16 +404,16 @@ hr {
    zoom: 80%;
 }
 .clases {
-   zoom: 75%;
+   zoom: 80%;
 }
 .clases_mid {
-   zoom: 75%;
+   zoom: 80%;
 }
 .clasestitulo {
-   zoom: 75%;
+   zoom: 80%;
 }
 .redestitulo {
-   zoom: 75%;
+   zoom: 80%;
 }
 .contacto {
    zoom: 80%;
@@ -416,7 +424,10 @@ hr {
    
 }
 
+/*** RESPONSIVE PARA MOVIL ***/
+
 @media (max-width: 500px) {
+
 .fas {
    zoom: 80%;
 }
@@ -436,16 +447,16 @@ hr {
    zoom: 70%;
 }
 .clases {
-   zoom: 65%;
+   zoom: 70%;
 }
 .clases_mid {
-   zoom: 65%;
+   zoom: 70%;
 }
 .clasestitulo {
-   zoom: 65%;
+   zoom: 70%;
 }
 .redestitulo {
-   zoom: 65%;
+   zoom: 70%;
 }
 .contacto {
    zoom: 70%;
