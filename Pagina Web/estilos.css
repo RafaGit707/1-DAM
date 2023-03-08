@@ -285,7 +285,7 @@ hr {
 
 /*** @media RESPONSIVE ***/
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
    .checkbtn {
       display: block;
       margin: 0% 0% 0% 4%;
@@ -337,7 +337,7 @@ hr {
 
 /*** @media ZOOM ***/
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
 .fas {
    zoom: 90%;
@@ -378,7 +378,7 @@ hr {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
 .twitter2 {
    zoom: 85%;
