@@ -1,6 +1,4 @@
-import java.util.Random;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 public class Empleado {
 
@@ -10,7 +8,7 @@ public class Empleado {
     private int edad;
     private int salario;
     private String dni;
-    private int id;
+    public int empleados;
     private Sede sede;
 
     public Empleado(String nombre, String apellidos, int edad, int salario, String dni) {
@@ -19,7 +17,7 @@ public class Empleado {
         this.edad = edad;
         this.salario = salario;
         this.dni = dni;
-        this.id = contador++;
+        this.empleados = contador++;
     }
 
     public String getNombre() {
@@ -62,37 +60,28 @@ public class Empleado {
         this.dni = dni;
     }
 
-    public int getId() {
-        return id;
+    public int getCodigoEmpleado() {
+        return empleados;
     }
+
+    public void setCodigoEmpleado(int empleados) {
+        this.empleados = empleados;
+    }
+
+    public void addEmpleado(Empleado empleado) {
+        if (!empleados.contains(empleado)) {
+            empleados.add(empleado);
+            empleado.setSede(this);
+        }
+  
+     }
 
     public Sede getSede() {
         return sede;
     }
 
     public void setSede(Sede sede) {
-        if (sede == null) {
-            throw new IllegalArgumentException("La sede no puede ser nula");
-        }
-
-        if (sede.tieneEmpleadoConDni(dni)) {
-            throw new IllegalArgumentException("Ya existe un empleado con ese DNI en la sede");
-        }
-
         this.sede = sede;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Empleado empleado = (Empleado) o;
-        return dni.equals(empleado.dni);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(dni);
     }
 
     @Override
@@ -103,10 +92,21 @@ public class Empleado {
                 ", edad=" + edad +
                 ", salario=" + salario +
                 ", dni='" + dni + '\'' +
-                ", id=" + id +
+                ", idEmpleado=" + idEmpleado +
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Empleado)) return false;
+        Empleado empleado = (Empleado) o;
+        return dni.equals(empleado.dni);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
+    }
       
 }

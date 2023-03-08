@@ -7,43 +7,46 @@ public class Contraseña {
 
     Contraseña() {
         this(8);
+        generaPassword();
     }
 
     Contraseña(int longitud) {
         this.longitud = longitud;
-        this.contraseña = generaPassword();
+        generaPassword();
     }
 
-    private String generaPassword() {
-        Random random = new Random();
-        StringBuilder password = new StringBuilder();
-        int mayusculas = 0;
-        int minusculas = 0;
-        int numeros = 0;
+    public void generaPassword() {
+        String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String minusculas = "abcdefghijklmnopqrstuvwxyz";
+        String numeros = "0123456789";
+        Random rand = new Random();
+        StringBuilder sb = new StringBuilder();
+        int mayus = 0, minus = 0, nums = 0;
 
-        while (password.length() < longitud) {
-            int tipoCaracter = random.nextInt(3);
-            char caracter = 'a';
-
-            switch (tipoCaracter) {
-                case 0: // mayuscula
-                    caracter = (char) (random.nextInt(26) + 'A');
-                    mayusculas++;
+        for (int i = 0; i < this.longitud; i++) {
+            int tipo = rand.nextInt(3); // Tipo de carácter: 0 = mayúscula, 1 = minúscula, 2 = número
+            switch (tipo) {
+                case 0:
+                    sb.append(mayusculas.charAt(rand.nextInt(mayusculas.length())));
+                    mayus++;
                     break;
-                case 1: // minuscula
-                    caracter = (char) (random.nextInt(26) + 'a');
-                    minusculas++;
+                case 1:
+                    sb.append(minusculas.charAt(rand.nextInt(minusculas.length())));
+                    minus++;
                     break;
-                case 2: // numero
-                    caracter = (char) (random.nextInt(10) + '0');
-                    numeros++;
+                case 2:
+                    sb.append(numeros.charAt(rand.nextInt(numeros.length())));
+                    nums++;
                     break;
             }
-
-            password.append(caracter);
         }
 
-        return password.toString();
+        // Asegurarse de que se cumplan los requisitos de "fuerte"
+        if (mayus > 2 && minus > 1 && nums >= 5) {
+            this.contraseña = sb.toString();
+        } else {
+            generaPassword();
+        }
     }
 
     private int cuentaMayusculas() {
@@ -83,25 +86,23 @@ public class Contraseña {
     }
 
     public boolean esFuerte() {
-        int mayusculas = cuentaMayusculas();
-        int minusculas = cuentaMinusculas();
-        int numeros = cuentaNumeros();
 
-        return mayusculas > 2 && minusculas > 1 && numeros > 5;
+        return cuentaMayusculas() > 2 && cuentaMinusculas() > 1 && cuentaNumeros() > 5;
     }
 
-
-    public void generaPassword(int longitud) {
-        this.longitud = longitud;
-        contraseña = generaPassword();
+    public String getContraseña() {
+        return this.contraseña;
     }
-
-    public String getContrasena() {
-        return contraseña;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public int getLongitud() {
-        return longitud;
+        return this.longitud;
     }
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
+    }
+
 
 }

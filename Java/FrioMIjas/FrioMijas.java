@@ -68,15 +68,31 @@ public class FrioMijas {
          * HACER *
          * Crea 5 equipos frigorificos diferentes y asignalos a la 2º sede y muéstralos a continuación   
          */
+ 
+        EquipoFrigorifico minibar = new Minibar(50, 30, 40, 1000, "LG", 150);
+        EquipoFrigorifico frigorifico = new Frigorifico(150, 60, 60, 3000, "Samsung", 500);
+        EquipoFrigorifico arcon = new Arcon(100, 80, 60, 2000, "Whirlpool", 400, "superior");
+        EquipoFrigorifico camara = new Camara(200, 200, 200, 8000, "Frigicoll", 2000, -20, 10);
 
-         
+        // Crear equipos frigoríficos y agregarlos a la sede
+        Frigorifico frigo1 = new Frigorifico(180, 70, 60, 2500, "Samsung", 3000);
+        Arcon arcon1 = new Arcon(100, 80, 70, 1500, "Bosch", 1500, "Abatible");
+        Camara camara1 = new Camara(200, 150, 250, 6000, "LG", 10000, -10, 10);
+        Minibar minibar1 = new Minibar(50, 40, 30, 1000, "Philips", 500, 2);
 
-
-
-
-
-        
-        
+        sede1.addEquipoFrigorifico(frigo1);
+        sede1.addEquipoFrigorifico(arcon1);
+        sede1.addEquipoFrigorifico(camara1);
+        sede1.addEquipoFrigorifico(minibar1);
+    
+        System.out.println(sede1);
+    
+        // Mostrar el consumo de cada equipo frigorífico
+        System.out.println("Consumo de equipos frigoríficos en sede 1:");
+        for (EquipoFrigorifico equipo : sede1.getEquiposFrigorificos()) {
+            System.out.println(equipo.getClass().getSimpleName() + ": " + equipo.calcularConsumo() + " kWh/mes");
+        }
     }
+
     
 }
