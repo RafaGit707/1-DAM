@@ -40,13 +40,6 @@ public class Contraseña {
                     break;
             }
         }
-
-        // Asegurarse de que se cumplan los requisitos de "fuerte"
-        if (mayus > 2 && minus > 1 && nums >= 5) {
-            this.contraseña = sb.toString();
-        } else {
-            generaPassword();
-        }
     }
 
     private int cuentaMayusculas() {
