@@ -41,6 +41,7 @@ public class Contraseña {
             }
         }
     }
+    
 
     private int cuentaMayusculas() {
         int mayusculas = 0;

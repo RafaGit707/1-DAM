@@ -84,7 +84,7 @@ public class Empleado {
                 ", edad=" + edad +
                 ", salario=" + salario +
                 ", dni='" + dni + '\'' +
-                ", idEmpleado=" + idEmpleado +
+                ", idEmpleado=" + apellidos + //idEmpleado
                 '}';
     }
 

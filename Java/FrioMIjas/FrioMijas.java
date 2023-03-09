@@ -33,12 +33,12 @@ public class FrioMijas {
 
         //Cambiamos contraseñas
         System.out.println(jefe1);
-        //jefe1.generaPassword(5);
+        jefe1.generaPassword(5);
         System.out.println("Nueva contraseña para jefe1");
         System.out.println(jefe1);
 
         System.out.println(jefe2);
-       // jefe2.generaPassword();
+        jefe2.generaPassword();
         System.out.println("Nueva contraseña para jefe2");
         System.out.println(jefe2);
 
