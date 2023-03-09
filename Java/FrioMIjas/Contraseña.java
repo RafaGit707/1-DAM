@@ -3,7 +3,7 @@ import java.util.Random;
 public class Contraseña {
 
     private int longitud;
-    private String contraseña;
+    private String contraseña = "";
 
     Contraseña() {
         this(8);
@@ -19,23 +19,23 @@ public class Contraseña {
         String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
         String numeros = "0123456789";
-        Random rand = new Random();
+        Random r = new Random();
         StringBuilder sb = new StringBuilder();
         int mayus = 0, minus = 0, nums = 0;
 
         for (int i = 0; i < this.longitud; i++) {
-            int tipo = rand.nextInt(3); // Tipo de carácter: 0 = mayúscula, 1 = minúscula, 2 = número
+            int tipo = r.nextInt(3); // Tipo de carácter: 0 = mayúscula, 1 = minúscula, 2 = número
             switch (tipo) {
                 case 0:
-                    sb.append(mayusculas.charAt(rand.nextInt(mayusculas.length())));
+                    sb.append(mayusculas.charAt(r.nextInt(mayusculas.length())));
                     mayus++;
                     break;
                 case 1:
-                    sb.append(minusculas.charAt(rand.nextInt(minusculas.length())));
+                    sb.append(minusculas.charAt(r.nextInt(minusculas.length())));
                     minus++;
                     break;
                 case 2:
-                    sb.append(numeros.charAt(rand.nextInt(numeros.length())));
+                    sb.append(numeros.charAt(r.nextInt(numeros.length())));
                     nums++;
                     break;
             }

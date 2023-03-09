@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +11,14 @@ public class Sede {
    private int codigoSede;
    private List<EquipoFrigorifico> equiposFrigorificos;
 
-   public Sede(String nombre, String direccion, int codPostal) {
+   public Sede(String nombre, String direccion, int codPostal)
+   {
       this.nombre = nombre;
       this.direccion = direccion;
       this.codPostal = codPostal;
    }
-   public Sede(String nombre, String direccion, int codPostal, Jefe jefe) {
+   public Sede(String nombre, String direccion, int codPostal, Jefe jefe)
+   {
       this.nombre = nombre;
       this.direccion = direccion;
       this.codPostal = codPostal;
@@ -26,38 +27,54 @@ public class Sede {
       this.equiposFrigorificos = new ArrayList<>();
    }
 
-   public String getNombre() {
+   public String getNombre()
+   {
       return nombre;
    }
 
-   public void setNombre(String nombre) {
+   public void setNombre(String nombre)
+   {
       this.nombre = nombre;
    }
 
-   public String getDireccion() {
+   public String getDireccion()
+   {
       return direccion;
    }
 
-   public void setDireccion(String direccion) {
+   public void setDireccion(String direccion)
+   {
       this.direccion = direccion;
+   }
+
+   public int getCodPostal()
+   {
+      return codPostal;
+   }
+
+   public void setCodPostal(int codPostal)
+   {
+      this.codPostal = codPostal;
    }
 
    public void setJefe(Jefe jefe)
    {
-      setJefe(jefe);
+      this.jefe = jefe;
    }
 
    public int getCodigoSede() {
       return codigoSede;
    }
 
-   public void addEmpleado(Empleado empleado) {
-      if (!empleados.contains(empleado)) {
-          empleados.add(empleado);
-          empleado.setSede(this);
+   public void addEmpleado(Empleado empleado)
+   {
+      if (!jefe.getEmpleados().contains(empleado))
+      {
+         jefe.getEmpleados().add(empleado);
+         empleado.setSede(this);
       }
-
    }
+      
    public List<EquipoFrigorifico> getEquiposFrigorificos() {
       return equiposFrigorificos;
   }
@@ -73,4 +90,5 @@ public class Sede {
       }
       return consumoTotal;
   }
+
 }

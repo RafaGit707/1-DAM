@@ -1,5 +1,3 @@
-import java.util.Random;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FrioMijas {
@@ -78,7 +76,7 @@ public class FrioMijas {
         Frigorifico frigo1 = new Frigorifico(180, 70, 60, 2500, "Samsung", 3000);
         Arcon arcon1 = new Arcon(100, 80, 70, 1500, "Bosch", 1500, "Abatible");
         Camara camara1 = new Camara(200, 150, 250, 6000, "LG", 10000, -10, 10);
-        Minibar minibar1 = new Minibar(50, 40, 30, 1000, "Philips", 500, 2);
+        Minibar minibar1 = new Minibar(50, 40, 30, 1000, "Philips", 500); // +++ ,2);
 
         sede1.addEquipoFrigorifico(frigo1);
         sede1.addEquipoFrigorifico(arcon1);
@@ -92,6 +90,10 @@ public class FrioMijas {
         for (EquipoFrigorifico equipo : sede1.getEquiposFrigorificos()) {
             System.out.println(equipo.getClass().getSimpleName() + ": " + equipo.calcularConsumo() + " kWh/mes");
         }
+    }
+
+    public static List<Empleado> addEmpleado() {
+        return null;
     }
 
     

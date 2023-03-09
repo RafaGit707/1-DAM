@@ -24,7 +24,7 @@ public abstract class EquipoFrigorifico {
         return alto;
     }
 
-    public void setAlto(double alto) {
+    public void setAlto(int alto) {
         this.alto = alto;
     }
 
@@ -32,7 +32,7 @@ public abstract class EquipoFrigorifico {
         return ancho;
     }
 
-    public void setAncho(double ancho) {
+    public void setAncho(int ancho) {
         this.ancho = ancho;
     }
 
@@ -40,7 +40,7 @@ public abstract class EquipoFrigorifico {
         return profundidad;
     }
 
-    public void setProfundidad(double profundidad) {
+    public void setProfundidad(int profundidad) {
         this.profundidad = profundidad;
     }
 
@@ -48,7 +48,7 @@ public abstract class EquipoFrigorifico {
         return frigorias;
     }
 
-    public void setFrigorias(double frigorias) {
+    public void setFrigorias(int frigorias) {
         this.frigorias = frigorias;
     }
 

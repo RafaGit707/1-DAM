@@ -2,7 +2,7 @@ public class Arcon extends EquipoFrigorifico {
 
     private String tipoApertura;
 
-    public Arcon(int alto, int ancho, int profundidad, String tipoApertura, int frigorias, String marca) {
+    public Arcon(int alto, int ancho, int profundidad, int frigorias, String marca, int numBaldas, String tipoApertura) {
         super(alto, ancho, profundidad, frigorias, marca);
         this.tipoApertura = tipoApertura;
     }

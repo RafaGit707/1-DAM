@@ -1,5 +1,4 @@
 import java.util.Objects;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Jefe extends Empleado {
@@ -9,22 +8,25 @@ public class Jefe extends Empleado {
    private int edad;
    private int salario;
    private String dni;
-   private int empleados;
    private Contraseña contraseña;
    private Sede sede;
-   public int contador;
+   private int contadorSede;
+   private List<Empleado> empleados;
+
 
    //CREAMOS LOS CONSTRUCTORES
 
    public Jefe(String nombre, String apellidos, int edad, int salario, String dni)
    {
-      this.nombre = nombre;
-      this.apellidos = apellidos;
-      this.edad = edad;
-      this.salario =  salario;
-      this.dni = dni;
-      this.empleados = FrioMijas.addEmpleado();
-      contador++;
+        super(nombre, apellidos, edad, salario, dni);
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.salario =  salario;
+        this.dni = dni;
+        this.contraseña = new Contraseña(8);
+        this.empleados = FrioMijas.addEmpleado();
+        contadorSede++;
    }
 
     public String getNombre() {
@@ -67,8 +69,12 @@ public class Jefe extends Empleado {
         this.salario = salario;
     }
 
-    public int addEmpleado() {
+    public List<Empleado> getEmpleados() {
         return empleados;
+    }
+
+    public void addEmpleado(Empleado empleado) {
+        empleados.add(empleado);
     }
 
     public Sede getSede() {
@@ -80,19 +86,23 @@ public class Jefe extends Empleado {
     }
     public boolean esFuerte() {
       return contraseña.esFuerte();
-  }
+    }
 
-  public void generaPassword(Contraseña longitud) {
-      contraseña.generaPassword();
-  }
+    public void generaPassword(Contraseña longitud) {
+        contraseña.generaPassword();
+    }
 
-  public String getContraseña() {
-      return contraseña.getContraseña();
-  }
+    public void generaPassword() {
+        contraseña.generaPassword();
+    }
 
-  public void cambiarContraseña(int longitud) {
-      contraseña = new Contraseña(longitud);
-  }
+    public String getContraseña() {
+        return contraseña.getContraseña();
+    }
+
+    public void cambiarContraseña(int longitud) {
+        contraseña = new Contraseña(longitud);
+    }
 
     @Override
     public boolean equals(Object obj) {

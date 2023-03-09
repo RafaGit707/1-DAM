@@ -8,7 +8,7 @@ public class Empleado {
     private int edad;
     private int salario;
     private String dni;
-    public int empleados;
+    private int empleados;
     private Sede sede;
 
     public Empleado(String nombre, String apellidos, int edad, int salario, String dni) {
@@ -67,14 +67,6 @@ public class Empleado {
     public void setCodigoEmpleado(int empleados) {
         this.empleados = empleados;
     }
-
-    public void addEmpleado(Empleado empleado) {
-        if (!empleados.contains(empleado)) {
-            empleados.add(empleado);
-            empleado.setSede(this);
-        }
-  
-     }
 
     public Sede getSede() {
         return sede;
