@@ -62,27 +62,9 @@ main {
 
 /*** ASIDE BARRA LATERAL ***/
 
-.barralateral {
+.news {
    height: fit-content;
    background-color: #ffffff;
-   padding-right: 4%;
-   font-variant: small-caps;
-}
-.ul_categorias {
-   margin-left: 20%;
-   color: #00c3ff;
-}
-.h4_categorias {
-   padding: 3%;
-   background-color: #b5ecff;
-}
-.list_h4 {
-   padding-left: 5%;
-   padding-top: 5%;
-   list-style: none;
-}
-.secciones {
-   color: #000000;
 }
 
 /*** SECTION CAMISETAS ***/
@@ -90,8 +72,6 @@ main {
 .principal {
    height: fit-content;
    width: fit-content;
-   background-color: #ffffff;
-   padding: 3%;
 }
 
 
