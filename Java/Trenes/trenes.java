@@ -1,4 +1,4 @@
-package Trenes;
+// package Trenes;
 
 public class trenes {
    public static void main(String[] args) { 	 
