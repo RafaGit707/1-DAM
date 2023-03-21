@@ -15,27 +15,30 @@ body {
 
 .topheader {
    display: inline;
+   position: absolute;
    width: 100%;
+   margin-top: 2%;
    background-color: white;
    font-family: sans-serif;
 }
 .logo {
-   display: inline;
+   display: inline;  
 }
 .ul_enlaces {
+   display: inline;
    padding: 1%;
    background-color: black;
 }
 .listenlaces {
-   display: inline;
+   display: inline
 }
 .enlaces {
    color: #FFFFFF;
-   padding: 1%;
    text-decoration: none;
+   padding: 1%;
 }
 .enlaces:hover {
-   background-color: #00c3ff;
+   background-color: yellow;
 }
 
 /*** HEADER ***/
@@ -45,11 +48,8 @@ body {
    margin-top: 2%;
    font-family: Tahoma;
    padding: 2% 0% 2% 0%;
-   border-color: #00c3ff;
-   border: 2PX;
 }
 .article_header {
-   display: block;
    text-align: center;
 }
 .banner {
