@@ -4,20 +4,20 @@ import java.util.Comparator;
 
 public class Jugador implements Jugar_I, Comparable<Jugador> {
 
-    private static int ultimaLicencia = 999;
+    private static int contadorLicencia = 1000;
     private String nombreCompleto;
     private String apodo;
     private int numLicencia;
     private int numeroGoles;
     private int numeroFaltas;
 
-    public Jugador(String nombreCompleto, String apodo, int numLicencia) {
-        this.nombreCompleto = nombreCompleto;
-        this.apodo = apodo;
-        this.numLicencia = ++ultimaLicencia;
-        this.numeroGoles = 0;
-        this.numeroFaltas = 0; 
-    }
+    // public Jugador(String nombreCompleto, String apodo, int numLicencia) {
+    //     this.nombreCompleto = nombreCompleto;
+    //     this.apodo = apodo;
+    //     this.numLicencia = ++contadorLicencia;
+    //     this.numeroGoles = 0;
+    //     this.numeroFaltas = 0; 
+    // }
 
     public Jugador(String nombreCompleto, String apodo, int numLicencia, int numeroGoles, int numeroFaltas) {
         this.nombreCompleto = nombreCompleto;
@@ -25,6 +25,10 @@ public class Jugador implements Jugar_I, Comparable<Jugador> {
         this.numeroGoles = numeroGoles;
         this.numeroFaltas = numeroFaltas;
         this.numLicencia = numLicencia;
+    }
+
+    public Jugador(String nombreCompleto, String apodo, int numeroGoles, int numeroFaltas) {
+        this(nombreCompleto, apodo, contadorLicencia++, numeroGoles, numeroFaltas);
     }
 
     public String getNombreCompleto() {
@@ -42,7 +46,7 @@ public class Jugador implements Jugar_I, Comparable<Jugador> {
     public int getNumeroGoles() {
         return numeroGoles;
     }
-    
+
     public void setNumeroGoles(int numeroGoles) {
         this.numeroGoles = numeroGoles;
     }
@@ -76,16 +80,21 @@ public class Jugador implements Jugar_I, Comparable<Jugador> {
         System.out.println("Falta cometida por " + this.nombreCompleto);
     }
 
+    @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Jugador) {
-            Jugador otro = (Jugador) obj;
-            return numLicencia == otro.numLicencia;
+        if (obj == this) {
+            return true;
         }
-        return false;
+        if (!(obj instanceof Jugador)) {
+            return false;
+        }
+        Jugador jugador = (Jugador) obj;
+        return numLicencia == jugador.getNumLicencia();
     }
 
-    public int compareTo(Jugador otro) {
-        return numLicencia - otro.numLicencia;
+    @Override
+    public int compareTo(Jugador jugador) {
+        return Integer.compare(numLicencia, jugador.getNumLicencia());
     }
 
     public static Comparator<Jugador> ComparadorApodo() {

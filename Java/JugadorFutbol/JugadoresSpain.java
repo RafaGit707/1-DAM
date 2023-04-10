@@ -3,6 +3,7 @@ package Java.JugadorFutbol;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class JugadoresSpain {
 
@@ -16,52 +17,60 @@ public class JugadoresSpain {
         return jugadores;
     }
     
-    public void ordenarPorLicencia() {
+    private static void ordenarPorLicencia() {
         Collections.sort(jugadores);
-        System.out.println("\nJugadores ordenados por número de licencia:");
-        for (Jugador jugador : jugadores) {
-            System.out.println(jugador);
-        }
     }
 
-    public void ordenarPorGoles() {
-        Comparator<Jugador> comparador = Comparator.comparing(Jugador::getNumeroGoles).reversed()
-                .thenComparing(Jugador::getNombreCompleto);
-        Collections.sort(jugadores, comparador);
-        System.out.println("\nJugadores ordenados por número de goles:");
-        for (Jugador jugador : jugadores) {
-            System.out.println(jugador);
-        }
+    private static void ordenarPorGoles() {
+        Collections.sort(jugadores, new Comparator<Jugador>() {
+            @Override
+            public int compare(Jugador jugador1, Jugador jugador2) {
+                if (jugador1.getNumeroGoles() == jugador2.getNumeroGoles()) {
+                    return jugador1.getNombreCompleto().compareTo(jugador2.getNombreCompleto());
+                } else {
+                    return jugador2.getNumeroGoles() - jugador1.getNumeroGoles();
+                }
+            }
+        });
     }
 
-    public void ordenarPorFaltas() {
-        Comparator<Jugador> comparador = Comparator.comparing(Jugador::getNumeroFaltas).reversed()
-                .thenComparing(Jugador::getNombreCompleto);
-        Collections.sort(jugadores, comparador);
-        System.out.println("\nJugadores ordenados por número de faltas:");
+    private static void ordenarPorFaltas() {
+        Collections.sort(jugadores, new Comparator<Jugador>() {
+            @Override
+            public int compare(Jugador jugador1, Jugador jugador2) {
+                if (jugador1.getNumeroFaltas() == jugador2.getNumeroFaltas()) {
+                    return jugador1.getNombreCompleto().compareTo(jugador2.getNombreCompleto());
+                } else {
+                    return jugador1.getNumeroFaltas() - jugador2.getNumeroFaltas();
+                }
+            }
+        });
+    }
+
+    private static void mostrarJugadores() {
         for (Jugador jugador : jugadores) {
-            System.out.println(jugador);
+            System.out.println(jugador.toString());
         }
     }
     public static void main(String[] args) {
 
-        JugadoresSpain jugadoresSpain = new JugadoresSpain();
+        jugadores.add(new Jugador("Juan García", "La Roca de Oro", 1000, 5, 3));
+        jugadores.add(new Jugador("Pedro Fernández", "El Pulga de Titanio", 1001, 7, 2));
+        jugadores.add(new Jugador("María Martínez", "La Jardinera de los mares", 1002, 2, 6));
+        jugadores.add(new Jugador("Ana González", "La Muñeca loca", 1003, 1, 1));
+        jugadores.add(new Jugador("Luis Pérez", "El Burro Blanco", 1004, 3, 4));
 
-        // Agregar jugadores
-        jugadoresSpain.add(new Jugador("Juan García", "Grande", 1000));
-        jugadoresSpain.add(new Jugador("Pedro Fernández", "Pulga", 1001));
-        jugadoresSpain.add(new Jugador("María Martínez", "Raton", 1002));
-        jugadoresSpain.add(new Jugador("Ana González", "Mago", 1003));
-        jugadoresSpain.add(new Jugador("Luis Pérez", "La roca", 1004));
+        System.out.println("Jugadores ordenados por número de licencia:");
+        ordenarPorLicencia();
+        mostrarJugadores();
 
-        // Ordenar por número de licencia
-        jugadoresSpain.ordenarPorLicencia();
+        System.out.println("\nJugadores ordenados por número de goles:");
+        ordenarPorGoles();
+        mostrarJugadores();
 
-        // Ordenar por número de goles
-        jugadoresSpain.ordenarPorGoles();
-
-        // Ordenar por número de faltas
-        jugadoresSpain.ordenarPorFaltas();
+        System.out.println("\nJugadores ordenados por número de faltas:");
+        ordenarPorFaltas();
+        mostrarJugadores();
 
         Jugador jugadorAleatorio = UtilesJugadores.GeneraJugadorAleatorio();
         System.out.println("\nJugador aleatorio generado: " + jugadorAleatorio);

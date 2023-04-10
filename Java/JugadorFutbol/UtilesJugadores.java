@@ -5,6 +5,8 @@ public class UtilesJugadores {
 
     private static Random random = new Random();
 
+    private static int contadorLicencia = 1000;
+
     private static String[] nombres = {"Juan", "Pedro", "María", "Ana", "Luis", "Carlos", "Sofía", "Lucía", "Elena", "Miguel"};
     private static String[] apellidos = {"García", "Fernández", "Martínez", "González", "Pérez", "López", "Ruiz", "Sánchez", "Hernández", "Jiménez"};
     private static String[] apodo1 = {"Grande", "Pulga", "Raton", "Mago", "La roca", "Titan", "Cabeza", "Jardinero", "Carnicero", "Muñeco", "Burro", "Pantera"};
@@ -12,7 +14,6 @@ public class UtilesJugadores {
 
     public static Jugador GeneraJugadorAleatorio() {
         String nombreCompleto, apodo;
-        int contadorLicencia = 999;
         int numLicencia = contadorLicencia++;
         int numeroGoles = 0, numeroFaltas = 0;
 
