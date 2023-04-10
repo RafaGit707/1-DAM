@@ -2,75 +2,97 @@ package Java.JugadorFutbol;
 
 import java.util.Comparator;
 
-public class Jugador implements Comparable<Jugador> {
-    private String NombreCompleto;
-    private String Apodo;
-    private int Num_Licencia;
+public class Jugador implements Jugar_I, Comparable<Jugador> {
+    private static int ultimaLicencia = 999;
+    private String nombreCompleto;
+    private String apodo;
+    private int numLicencia;
     private int numeroGoles;
     private int numeroFaltas;
 
-    public Jugador(String nombreCompleto, String apodo, int num_Licencia) {
-        this.NombreCompleto = nombreCompleto;
-        this.Apodo = apodo;
-        this.Num_Licencia = num_Licencia;
-        this.numeroGoles = 0;
-        this.numeroFaltas = 0;
+    public Jugador(String nombreCompleto, String apodo, int numLicencia) {
+        this.nombreCompleto = nombreCompleto;
+        this.apodo = apodo;
+        this.numLicencia = ++ultimaLicencia;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public String getApodo() {
+        return apodo;
+    }
+
+    public int getNumLicencia() {
+        return numLicencia;
+    }
+
+    public int getNumeroGoles() {
+        return numeroGoles;
+    }
+
+    public int getNumeroFaltas() {
+        return numeroFaltas;
     }
 
     public void hacerGol() {
-        this.numeroGoles++;
+        numeroGoles++;
     }
 
     public void cometerFalta() {
-        this.numeroFaltas++;
+        numeroFaltas++;
     }
 
-    @Override
     public String toString() {
-        return NombreCompleto + " (" + Apodo + ") - Goles " + numeroGoles + " - Faltas " + numeroFaltas;
+        return nombreCompleto + " (" + apodo + ") - Goles " + numeroGoles + " - Faltas " + numeroFaltas;
     }
 
-    @Override
     public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (!(obj instanceof Jugador)) return false;
-        Jugador other = (Jugador) obj;
-        return this.Num_Licencia == other.Num_Licencia;
+        if (obj instanceof Jugador) {
+            Jugador otro = (Jugador) obj;
+            return numLicencia == otro.numLicencia;
+        }
+        return false;
     }
 
-    @Override
-    public int compareTo(Jugador jugador) {
-        return Integer.compare(this.Num_Licencia, jugador.Num_Licencia);
+    public int compareTo(Jugador otro) {
+        return numLicencia - otro.numLicencia;
     }
 
-    public static Comparator<Jugador> apodoComparator = new Comparator<Jugador>() {
-        @Override
-        public int compare(Jugador j1, Jugador j2) {
-            int result = j1.Apodo.compareTo(j2.Apodo);
-            if (result == 0) {
-                return j1.NombreCompleto.compareTo(j2.NombreCompleto);
+    public static Comparator<Jugador> comparadorApodo() {
+        return new Comparator<Jugador>() {
+            public int compare(Jugador j1, Jugador j2) {
+                int res = j1.apodo.compareTo(j2.apodo);
+                if (res == 0) {
+                    res = j1.nombreCompleto.compareTo(j2.nombreCompleto);
+                }
+                return res;
             }
-            return result;
-        }
-    };
+        };
+    }
 
-    public static Comparator<Jugador> golesComparator = new Comparator<Jugador>() {
-        @Override
-        public int compare(Jugador j1, Jugador j2) {
-            if (j1.numeroGoles == j2.numeroGoles) {
-                return j1.NombreCompleto.compareTo(j2.NombreCompleto);
+    public static Comparator<Jugador> comparadorGoles() {
+        return new Comparator<Jugador>() {
+            public int compare(Jugador j1, Jugador j2) {
+                int res = j2.numeroGoles - j1.numeroGoles;
+                if (res == 0) {
+                    res = j1.nombreCompleto.compareTo(j2.nombreCompleto);
+                }
+                return res;
             }
-            return Integer.compare(j2.numeroGoles, j1.numeroGoles);
-        }
-    };
+        };
+    }
 
-    public static Comparator<Jugador> faltasComparator = new Comparator<Jugador>() {
-        @Override
-        public int compare(Jugador j1, Jugador j2) {
-            if (j1.numeroFaltas == j2.numeroFaltas) {
-                return j1.NombreCompleto.compareTo(j2.NombreCompleto);
+    public static Comparator<Jugador> comparadorFaltas() {
+        return new Comparator<Jugador>() {
+            public int compare(Jugador j1, Jugador j2) {
+                int res = j2.numeroFaltas - j1.numeroFaltas;
+                if (res == 0) {
+                    res = j1.nombreCompleto.compareTo(j2.nombreCompleto);
+                }
+                return res;
             }
-            return Integer.compare(j2.numeroFaltas, j1.numeroFaltas);
-        }
-    };
+        };
+    }
 }
