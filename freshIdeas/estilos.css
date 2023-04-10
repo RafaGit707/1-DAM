@@ -41,15 +41,20 @@ body {
 /*** HEADER ***/
 
 .header1 {
-   display: inline;
+   display: block;
+   width: 100%;
    margin-top: 2%;
    font-family: Tahoma;
-   padding: 2% 0% 2% 0%;
+   border: 2px solid #ff6550;
 }
 .article_header {
-   text-align: center;
+   display: block;
+   line-height: 140%;
+   border: 2px solid #ff6550;
 }
 .banner {
+   width: 100%;
+   border: 2px solid #ff6550;
 }
 
 /*** MAIN ***/
@@ -64,8 +69,11 @@ main {
 
 .services {
    height: fit-content;
-   width: fit-content;
+   width: 60%;
+   padding: 2%;
+   line-height: 140%;
 }
+
 
 /*** ASIDE BARRA LATERAL NEWS ***/
 

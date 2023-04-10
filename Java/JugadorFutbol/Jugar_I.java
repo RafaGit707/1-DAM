@@ -1,5 +1,11 @@
 package Java.JugadorFutbol;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Random;
+
 // Interfaz Jugar_I
 public interface Jugar_I {
     void hacerGol();
@@ -59,23 +65,46 @@ public class Jugador implements Comparable<Jugador>, Jugar_I {
     }
 
     // Métodos de la interfaz Jugar_I
-@Override
-public void hacerGol() {
-    this.numeroGoles++;
-    System.out.println(this.nombre + " ha marcado un gol.");
-}
-
-@Override
-public void cometerFalta() {
-    this.numeroFaltas++;
-    System.out.println(this.nombre + " ha cometido una falta.");
-}
-
-// Método toString()
-@Override
-public String toString() {
-    return nombre + " (" + apodo + ") - Goles " + numeroGoles + " - Faltas " + numeroFaltas;
-}
+    public void hacerGol() {
+        System.out.println("¡¡¡GOOOOL!!! " + apodo + " marca para su equipo.");
+        numeroGoles++;
+    }
+    
+    public void cometerFalta() {
+        System.out.println(apodo + " comete una falta.");
+        numeroFaltas++;
+    }
+    
+    public String toString() {
+        return nombre + " (" + apodo + ") - Goles " + numeroGoles + " - Faltas " + numeroFaltas;
+    }
+    
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Jugador)) {
+            return false;
+        }
+        Jugador other = (Jugador) obj;
+        return numLicencia == other.numLicencia;
+    }
+    
+    public int compareTo(Jugador other) {
+        return Integer.compare(numLicencia, other.numLicencia);
+    }
+    
+    public static Comparator<Jugador> getComparatorByApodo() {
+        return Comparator.comparing(Jugador::getApodo)
+                .thenComparing(Jugador::getNombre);
+    }
+    
+    public static Comparator<Jugador> getComparatorByGoles() {
+        return Comparator.comparing(Jugador::getNumeroGoles)
+                .thenComparing(Jugador::getNombre);
+    }
+    
+    public static Comparator<Jugador> getComparatorByFaltas() {
+        return Comparator.comparing(Jugador::getNumeroFaltas)
+                .thenComparing(Jugador::getNombre);
+    }
 
 // Método equals() comparando por número de licencia
 @Override
