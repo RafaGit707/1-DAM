@@ -1,29 +1,30 @@
 package Programacion.Java.Matrix;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public abstract class Personaje {
-    private static final Random RANDOM = new Random();
-    private static final String[] CIUDADES = {"Madrid", "New York", "Pekin", "Leganés", "Londres", "Paris"};
-    private static final String[] NOMBRES = {"Juan", "Pedro", "María", "Ana", "Luis", "Carlos", "Sofía", "Lucía", "Elena", "Miguel"};
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+    
+    private static final Random random = new Random();
+    private static final String[] ciudades = {"Madrid", "New York", "Pekin", "Leganés", "Londres", "Paris"};
+    private static final String[] nombres = {"Juan", "Pedro", "María", "Ana", "Luis", "Carlos", "Sofía", "Lucía", "Elena", "Miguel"};
 
     private int id;
     private String nombre;
     private String ciudadNacimiento;
-    private LocalDateTime fechaCreacion;
+    private String fechaCreacion;
     private int edad;
     private int probabilidadMorir;
 
-    public Personaje(int id) {
+    public Personaje(int id, String nombre, String ciudadNacimiento, String fechaCreacion, int edad, int probabilidadMorir) {
         this.id = id;
-        this.nombre = NOMBRES[RANDOM.nextInt(NOMBRES.length)];
-        this.ciudadNacimiento = CIUDADES[RANDOM.nextInt(CIUDADES.length)];
-        this.fechaCreacion = LocalDateTime.now();
+        this.nombre = nombres[random.nextInt(nombres.length)];
+        this.ciudadNacimiento = ciudades[random.nextInt(ciudades.length)];
+        this.fechaCreacion = fechaCreacion;
         this.edad = 0;
-        this.probabilidadMorir = RANDOM.nextInt(101);
+        this.probabilidadMorir = random.nextInt(101);
     }
 
     public int getId() {
@@ -38,7 +39,7 @@ public abstract class Personaje {
         return ciudadNacimiento;
     }
 
-    public LocalDateTime getFechaCreacion() {
+    public String getFechaCreacion() {
         return fechaCreacion;
     }
 
@@ -65,8 +66,10 @@ public abstract class Personaje {
         return "ID: " + id +
                 ", Nombre: " + nombre +
                 ", Ciudad de Nacimiento: " + ciudadNacimiento +
-                ", Fecha de Creación: " + fechaCreacion.format(DATE_FORMATTER) +
+                ", Fecha de Creación: " + fechaCreacion +
                 ", Edad: " + edad +
                 ", Probabilidad de Morir: " + probabilidadMorir + "%";
     }
+
+    List<Personaje> personas = FactoriaPersonas.crearPersonas(200);
 }
