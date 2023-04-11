@@ -15,7 +15,8 @@ public class UtilesJugadores {
     public static Jugador GeneraJugadorAleatorio() {
         String nombreCompleto, apodo;
         int numLicencia = contadorLicencia++;
-        int numeroGoles = 0, numeroFaltas = 0;
+        int numeroGoles = random.nextInt(10);
+        int numeroFaltas = random.nextInt(10);
 
         do {
             nombreCompleto = nombres[random.nextInt(nombres.length)] + " " + apellidos[random.nextInt(apellidos.length)];

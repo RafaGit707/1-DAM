@@ -11,14 +11,6 @@ public class Jugador implements Jugar_I, Comparable<Jugador> {
     private int numeroGoles;
     private int numeroFaltas;
 
-    // public Jugador(String nombreCompleto, String apodo, int numLicencia) {
-    //     this.nombreCompleto = nombreCompleto;
-    //     this.apodo = apodo;
-    //     this.numLicencia = ++contadorLicencia;
-    //     this.numeroGoles = 0;
-    //     this.numeroFaltas = 0; 
-    // }
-
     public Jugador(String nombreCompleto, String apodo, int numLicencia, int numeroGoles, int numeroFaltas) {
         this.nombreCompleto = nombreCompleto;
         this.apodo = apodo;
