@@ -1,8 +1,8 @@
 package Programacion.Java.Matrix;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Matrix {
     
@@ -75,80 +75,69 @@ public class Matrix {
                 int capacidadInfeccion = Utils.generarNumeroAleatorio(1, MAX_CAPACIDAD_INFECCION_AGENTE_SMITH);
                 smith.setCapacidadInfeccion(capacidadInfeccion);
                 System.out.println("El agente Smith tiene una capacidad de infección de " + capacidadInfeccion);
-                            // Se infectan personajes aleatorios
-            List<Personaje> personasNoInfectadas = obtenerPersonajesNoInfectados();
-            Collections.shuffle(personasNoInfectadas);
-            int personasInfectadas = 0;
-            for (Personaje personaje : personasNoInfectadas) {
-                if (personaje instanceof Persona) {
-                    Persona persona = (Persona) personaje;
-                    if (personasInfectadas < capacidadInfeccion) {
-                        persona.setInfectado(true);
-                        virusSmith.add(personaje);
-                        personasInfectadas++;
-                        System.out.println("La persona " + persona.getId() + " ha sido infectada por el virus de Smith");
-                    } else {
-                        break;
+                // Se infectan
+                // Se verifica si hay personajes cercanos al agente Smith y se agregan a la lista de virus
+                for (int i = 0; i < 25; i++) {
+                    if (personajes[i] != null && personajes[i] instanceof Persona) {
+                    Persona persona = (Persona) personajes[i];
+                    if (Utils.calcularDistancia(persona.getPosicion(), smith.getPosicion()) <= smith.getRadioInfeccion()) {
+                    System.out.println("El agente Smith ha infectado a la persona " + persona.getId());
+                    virusSmith.add(persona);
+                    }
                     }
                 }
             }
-        }
+            // Se evalúa si el agente Smith debe ser eliminado
+            if (virusSmith.size() >= MAX_CAPACIDAD_INFECCION_AGENTE_SMITH) {
+                System.out.println("El agente Smith ha sido eliminado");
+                virusSmith.clear();
+                int posicionNuevaSmith = Utils.generarNumeroAleatorio(0, 24);
+                while (personajes[posicionNuevaSmith] instanceof Agente) {
+                    posicionNuevaSmith = Utils.generarNumeroAleatorio(0, 24);
+                }
+                personajes[smith.getPosicion()] = null;
+                smith.setPosicion(posicionNuevaSmith);
+                personajes[posicionNuevaSmith] = smith;
+            }
 
-        // Cada 5 iteraciones, se elimina un agente Smith y se genera uno nuevo
-        if (iteracionActual % MAX_ITERACIONES_ELIMINAR_SMITH == 0) {
-            if (virusSmith.size() > 0) {
-                int indiceEliminar = Utils.generarNumeroAleatorio(0, virusSmith.size() - 1);
-                Personaje personaEliminar = virusSmith.get(indiceEliminar);
-                if (personaEliminar instanceof Persona) {
-                    Persona persona = (Persona) personaEliminar;
-                    persona.setInfectado(false);
-                    virusSmith.remove(persona);
-                    System.out.println("El virus de Smith ha sido eliminado de la persona " + persona.getId());
+            // Se evalúa si Neo debe cambiar de posición
+            if (iteracionActual % MAX_ITERACIONES_CAMBIAR_POSICION_NEO == 0) {
+                int nuevaPosicion = Utils.generarNumeroAleatorio(0, 24);
+                while (personajes[nuevaPosicion] instanceof Agente) {
+                    nuevaPosicion = Utils.generarNumeroAleatorio(0, 24);
+                }
+                personajes[neo.getPosicion()] = null;
+                neo.setPosicion(nuevaPosicion);
+                personajes[nuevaPosicion] = neo;
+            }
+
+            // Se evalúa si se deben agregar nuevos personajes genéricos
+            if (iteracionActual % MAX_ITERACIONES_NUEVO_PERSONAJE_GENERICO == 0) {
+                int cantidadNuevasPersonas = Utils.generarNumeroAleatorio(1, MAX_NUEVAS_PERSONAS);
+                for (int i = 0; i < cantidadNuevasPersonas; i++) {
+                    Personaje personajeGenerico = obtenerPersonajeGenerico();
+                    int posicionNuevaPersona = Utils.generarNumeroAleatorio(0, 24);
+                    while (personajes[posicionNuevaPersona] != null) {
+                        posicionNuevaPersona = Utils.generarNumeroAleatorio(0, 24);
+                    }
+                    personajes[posicionNuevaPersona] = personajeGenerico;
                 }
             }
-            smith = generarAgenteSmith();
-            System.out.println("Se ha generado un nuevo agente Smith en la posición " + smith.getPosicion());
-        }
 
-        // Cada 10 iteraciones, se cambia la posición de Neo
-        if (iteracionActual % MAX_ITERACIONES_CAMBIAR_POSICION_NEO == 0) {
-            int nuevaPosicionNeo = Utils.generarNumeroAleatorio(0, 24);
-            while (nuevaPosicionNeo == neo.getPosicion()) {
-                nuevaPosicionNeo = Utils.generarNumeroAleatorio(0, 24);
+            // Se evalúa si se deben eliminar personajes genéricos para dar lugar a nuevos personajes
+            int cantidadPersonas = 0;
+            for (int i = 0; i < 25; i++) {
+                if (personajes[i] instanceof Persona) {
+                    cantidadPersonas++;
+                }
             }
-            personajes[neo.getPosicion()] = null;
-            neo.setPosicion(nuevaPosicionNeo);
-            personajes[nuevaPosicionNeo] = neo;
-            System.out.println("Neo se ha movido a la posición " + neo.getPosicion());
-        }
+            if (cantidadPersonas >= MAX_PERSONAS) {
+                System.out.println("Se deben eliminar personajes para dar lugar a nuevos");
+                int cantidadPersonasAEliminar = cantidadPersonas - MAX_PERSONAS + Utils.generarNumeroAleatorio(0, 5);
+                for (int i = 0; i < cantidadPersonasAEliminar; i++) {
+                    int posicionAEliminar = Utils.generarNumeroAleatorio(0, 24);
+                    while (personajes[posicionAEliminar] == null || personajes[posicionAEliminar] instanceof Agente
 
-        // Cada 30 iteraciones, se genera un nuevo personaje genérico y se elimina uno existente
-        if (iteracionActual % MAX_ITERACIONES_NUEVO_PERSONAJE_GENERICO == 0) {
-            Personaje personajeEliminar = obtenerPersonajeGenerico();
-            int nuevaPosicion = Utils.generarNumeroAleatorio(0, 24);
-            while (personajes[nuevaPosicion] != null) {
-                nuevaPosicion = Utils.generarNumeroAleatorio(0, 24);
-            }
-            personajes[nuevaPosicion] = personajeEliminar;
-            System.out.println("Se ha generado un nuevo personaje genérico en la posición " + nuevaPosicion);
-        }
-
-        // Se mueven los personajes
-        moverPersonajes();
-
-        // Se muestra la matriz con la ubicación de los personajes
-        mostrarMatriz();
-
-        iteracionActual++;
-    }
-
-    System.out.println("\n\n===== ¡Fin del juego! =====");
-}
-
-private List<Personaje> FactoriaPersonas(int MAX_PERSONAS) {
-    List<Personaje> personajes = new ArrayList<>();
-    for (int i = 0; i < MAX_PERSONAS; i++) {
-        int tipoPersonaje = Utils.generarNumeroAleatorio(0, 
-
-
-}
+    
+    
+    
