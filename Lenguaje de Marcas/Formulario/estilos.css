@@ -2,3 +2,12 @@ form  {
     text-align: center;
     margin-top: 20%;
 }
+input:required {
+    background-color: lightcoral;
+}
+input:optional {
+    background-color: lightgoldenrodyellow;
+}
+input#enviar {
+    background: none;
+}
