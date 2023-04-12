@@ -1,4 +1,4 @@
-package Programacion.Java.Matrix;
+package Java.Matrix;
 
 import java.util.List;
 import java.util.Random;
