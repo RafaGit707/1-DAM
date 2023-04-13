@@ -1,6 +1,5 @@
 package Java.Matrix;
 
-import java.time.LocalDateTime;
 import java.util.Random;
 
 public class Smith extends Personaje {
@@ -42,9 +41,10 @@ public class Smith extends Personaje {
         System.out.println("ID: " + getId());
         System.out.println("Nombre: " + getNombre());
         System.out.println("Ciudad de nacimiento: " + getCiudadNacimiento());
-        System.out.println("Fecha y hora de creación: " + getFechaHoraCreacion());
+        System.out.println("Fecha y hora de creación: " + getFechaCreacion());
         System.out.println("Edad: " + getEdad());
         System.out.println("Probabilidad de morir: " + getProbabilidadMorir());
         System.out.println("Capacidad de infección: " + capacidadInfeccion);
         System.out.println();
     }
+}
