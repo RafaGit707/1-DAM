@@ -26,6 +26,26 @@ public class CarritoCompra {
         return false;
     }
 
+    public boolean contieneCategoria(String categoria) {
+        for (Producto p : productos) {
+            if (p.getCategoria().equals(categoria)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+
+    public double calcularPrecioTotal() {
+        double precioTotal = 0;
+        for (Producto producto : productos) {
+            precioTotal += producto.getPrecio();
+        }
+        DescuentoPorCategoria descuentoPorCategoria = new DescuentoPorCategoria();
+        double descuentoTotal = descuentoPorCategoria.calcularDescuento(productos);
+        return precioTotal - descuentoTotal;
+    }
+
     public void limpiarCarrito() {
         productos.clear();
     }

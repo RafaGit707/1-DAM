@@ -1,9 +1,18 @@
 package Java.ExamenColecciones_RafaGalvan;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DescuentoPorCategoria {
+
     private HashMap<String, Double> descuentos;
+    private double descuento;
+    private String categoria;
+
+    public static final String CATEGORIA_ELECTRONICA = "Electrónica";
+    public static final String CATEGORIA_HOGAR = "Hogar";
+    public static final String CATEGORIA_DEPORTES = "Deportes";
+    public static final String CATEGORIA_MODA = "Moda";
 
     public DescuentoPorCategoria() {
         descuentos = new HashMap<String, Double>();
@@ -33,7 +42,7 @@ public class DescuentoPorCategoria {
         return false;
     }
 
-    public double obtener(String categoria) {
+    public double obtenerDescuento(String categoria) {
         if (descuentos.containsKey(categoria)) {
             return descuentos.get(categoria);
         }
@@ -48,5 +57,15 @@ public class DescuentoPorCategoria {
             sb.append(categoria).append(" - ").append(descuentos.get(categoria)).append("%\n");
         }
         return sb.toString();
+    }
+
+    public double calcularDescuento(ArrayList<Producto> productos) {
+        double descuentoTotal = 0;
+        for (Producto p : productos) {
+            if (p.getCategoria().equals(categoria)) {
+                descuentoTotal += p.getPrecio() * descuento;
+            }
+        }
+        return descuentoTotal;
     }
 }

@@ -1,96 +1,105 @@
 package Java.ExamenColecciones_RafaGalvan;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class Tienda implements Tienda_I {
-    
-    private HashMap<Integer, Producto> productos;
+
+    private ArrayList<Producto> productos;
     private DescuentoPorCategoria descuentos;
     private CarritoCompra carrito;
-    
+
     public Tienda() {
-        productos = new HashMap<Integer, Producto>();
+        productos = new ArrayList<>();
         descuentos = new DescuentoPorCategoria();
         carrito = new CarritoCompra();
     }
-    
+
     public boolean insertarProducto(Producto producto) {
-        if (productos.containsKey(producto.getId())) {
-            return false; // el producto ya existe
+        if (buscarProducto(producto.getId()) != null) {
+            return false; // ya existe un producto con ese id
         }
-        productos.put(producto.getId(), producto);
+        productos.add(producto);
         return true;
     }
-    
+
     public String mostrarProductosPorNombre() {
-        List<Producto> listaProductos = new ArrayList<Producto>(productos.values());
-        listaProductos.sort(new ComparadorProductosPorNombre());
-        StringBuilder sb = new StringBuilder();
-        for (Producto p : listaProductos) {
-            sb.append(p.toString());
-            sb.append("\n");
-        }
-        return sb.toString();
+        ArrayList<Producto> productosOrdenados = new ArrayList<>(productos);
+        productosOrdenados.sort((p1, p2) -> p1.getNombre().compareTo(p2.getNombre()));
+        return productosOrdenados.toString();
     }
-    
+
     public String mostrarProductosPorId() {
-        List<Producto> listaProductos = new ArrayList<Producto>(productos.values());
-        listaProductos.sort(new ComparadorProductosPorId());
-        StringBuilder sb = new StringBuilder();
-        for (Producto p : listaProductos) {
-            sb.append(p.toString());
-            sb.append("\n");
-        }
-        return sb.toString();
+        ArrayList<Producto> productosOrdenados = new ArrayList<>(productos);
+        productosOrdenados.sort((p1, p2) -> Integer.compare(p1.getId(), p2.getId()));
+        return productosOrdenados.toString();
     }
-    
+
     public Producto buscarProducto(int id) {
-        return productos.get(id);
+        for (Producto p : productos) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null; // no se encontró el producto
     }
-    
+
     public double obtenerCuentaTotal() {
-        double total = carrito.calcularTotal();
-        double descuentoHogar = descuentos.obtener("Hogar");
-        double descuentoElectronica = descuentos.obtener("Electronica");
-        double descuentoTotal = 0;
-        if (carrito.contieneCategoria("Hogar")) {
-            descuentoTotal += total * descuentoHogar;
+        double total = carrito.calcularPrecioTotal();
+        double descuentoElectronica = descuentos.obtenerDescuento(DescuentoPorCategoria.CATEGORIA_ELECTRONICA);
+        double descuentoHogar = descuentos.obtenerDescuento(DescuentoPorCategoria.CATEGORIA_HOGAR);
+        if (carrito.contieneCategoria(DescuentoPorCategoria.CATEGORIA_ELECTRONICA)) {
+            total -= total * descuentoElectronica;
         }
-        if (carrito.contieneCategoria("Electronica")) {
-            descuentoTotal += total * descuentoElectronica;
+        if (carrito.contieneCategoria(DescuentoPorCategoria.CATEGORIA_HOGAR)) {
+            total -= total * descuentoHogar;
         }
-        return total - descuentoTotal;
+        return total;
     }
-    
-    public void setDescuentoHogar(double descuento) {
-        descuentos.insertar("Hogar", descuento);
+
+    public CarritoCompra getCarritoDeCompra() {
+        return carrito;
+    }    
+
+    public DescuentoPorCategoria getDescuentoPorCategoria() {
+        return descuentos;
+    }    
+
+    public boolean insertarDescuentoCategoria(String categoria, double descuento) {
+        return descuentos.insertar(categoria, descuento);
     }
-    
-    public void setDescuentoElectronica(double descuento) {
-        descuentos.insertar("Electronica", descuento);
+
+    public boolean modificarDescuentoCategoria(String categoria, double nuevoDescuento) {
+        return descuentos.modificar(categoria, nuevoDescuento);
     }
-    
-    public void insertarProductoEnCarrito(Producto producto) {
-        carrito.insertar(producto);
+
+    public boolean eliminarDescuentoCategoria(String categoria) {
+        return descuentos.eliminarDescuento(categoria);
     }
-    
-    public void eliminarProductoDelCarrito(int id) {
-        carrito.eliminar(id);
+
+    public String mostrarDescuentos() {
+        return descuentos.toString();
     }
-    
+
+    public boolean insertarProductoEnCarrito(Producto producto) {
+        return carrito.insertar(producto);
+    }
+
+    public boolean eliminarProductoDelCarrito(int id) {
+        return carrito.eliminar(id);
+    }
+
     public void limpiarCarrito() {
         carrito.limpiarCarrito();
     }
-    
-    public String mostrarProductosEnCarritoPorCodigo() {
+
+    public String mostrarCarritoPorCodigo() {
         return carrito.mostrarPorCodigo();
     }
-    
-    public String mostrarProductosEnCarritoPorNombre() {
+
+    public String mostrarCarritoPorNombre() {
         return carrito.mostrarPorNombre();
     }
-    
+
 }
+
 

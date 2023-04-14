@@ -8,7 +8,7 @@ public class UsoTienda {
         Tienda tienda = new Tienda();
             
         // Creamos los descuentos y los añadimos a la tienda
-        tienda.getDescuentoPorCategoria().insertar("Electronica", 5);
+        tienda.getDescuentoPorCategoria().insertar("Electrónica", 5);
         tienda.getDescuentoPorCategoria().insertar("Hogar", 10);
         tienda.getDescuentoPorCategoria().insertar("Hogar", 5);
         
@@ -55,9 +55,11 @@ public class UsoTienda {
         //Mostramos los productos
         System.out.println("---- Productos por Nombre ---");
         System.out.println(tienda.mostrarProductosPorNombre());
+        System.out.println();
 
         System.out.println("---- Productos por Id ---");
         System.out.println(tienda.mostrarProductosPorId());
+        System.out.println();
 
         // Creamos el carrito de la compra y añadimos algunos productos
         CarritoCompra carrito = tienda.getCarritoDeCompra();
@@ -82,7 +84,7 @@ public class UsoTienda {
     }
     
     /*
-    Aqui te muestro la Salida del Programa:
+    Aqui te muestro la que deberia ser la Salida del Programa:
 
     	---- DESCUENTOS FIJADOS ----
 	Electronica - 5.0% 
