@@ -10,6 +10,82 @@ body {
    font-family: Arial, Helvetica, sans-serif;
 }
 
+/*** INICIAR SESION ***/
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15%;
+}
+
+#container {
+   display: none;
+}
+
+#container:target {
+   display: flex;
+}
+
+.form-container {
+   background-color: #202020;
+   border-radius: 8px;
+   box-shadow: 0 0 20px 1px #ffffff;
+   padding: 40px;
+   width: 450px;
+   max-width: 70%;
+}
+
+.form-container h1 {
+   font-size: 24px;
+   font-weight: 700;
+   margin-bottom: 32px;
+   text-align: center;
+}
+
+.form-group {
+   margin-bottom: 24px;
+}
+
+.form-group label {
+   display: block;
+   font-size: 14px;
+   font-weight: 700;
+   margin-bottom: 8px;
+}
+
+.form-group input {
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid #7e7e7e;
+   color: #ffffff;
+   font-size: 16px;
+   padding: 10px 0;
+   width: 100%;
+}
+
+.form-group input:focus {
+   outline: none;
+   border-bottom-color: #7e7e7e;
+}
+
+.submit-btn {
+   background-color: #000000;
+   border: none;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: 700;
+   padding: 12px;
+   width: 100%;
+   transition: background-color 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+   background-color: #525252;
+}
+
 /*** MENU TOPHEADER ***/
 
 .topheader {
@@ -75,6 +151,16 @@ body {
    float: right;
    list-style: none;
    margin-right: 1%;
+}
+.iniciar_sesion {
+   display: inline-block;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 100%;
+   color: #FFFFFF;
+   background: none;
+   border: none;
+   margin-left: 22%;
+   margin-right: 10%;
 }
 .twitter2 {
    display: none;
