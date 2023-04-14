@@ -57,4 +57,14 @@ public class Producto {
         this.categoria = categoria;
     }
 
+    public String toString() {
+        return "Producto{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
+    
 }
