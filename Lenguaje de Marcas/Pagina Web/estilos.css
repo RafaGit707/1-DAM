@@ -57,14 +57,19 @@ body {
    position: absolute;
    margin-top: 12px;
    text-align: center;
-   background-color: #5e3ad4;
    border: none;
    text-decoration: none;
    border-radius: 8px;
    color: #fff;
    cursor: pointer;
    font-size: 15px;
-   padding: 10px;
+   padding: 12px;
+ }
+
+ .X {
+   background-image: url(images/X.png);
+   width: 16px;
+   height: 16px;
  }
 
 .form-container {
@@ -153,8 +158,8 @@ body {
    background-color: #412796;
 }
 
-.cerrar:hover {
-   background-color: #412796;
+.cerrar:hover ~ .X{
+   background-image: url(images/X-N.png);
 }
 
 /*** MENU TOPHEADER ***/
