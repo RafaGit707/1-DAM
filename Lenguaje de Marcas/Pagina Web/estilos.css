@@ -29,15 +29,21 @@ body {
    height: 100%;
    background-color: rgba(0, 0, 0, 0.5);
    backdrop-filter: blur(7px);
+   transition: 0.5s ease-in-out;
+   z-index: 1;
 }
 
 .contenido {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #mostrar:target {
    display: flex;
+}
+
+#registro:target {
+   display: inline;
 }
 
 #cerrar:target {
@@ -45,19 +51,20 @@ body {
 }
 
 .cerrar {
-   display: block;
+   top: -12px;
+   right: 0px;
+   display: inline;
+   position: absolute;
    margin-top: 12px;
    text-align: center;
    background-color: #5e3ad4;
    border: none;
    text-decoration: none;
-   border-radius: 4px;
+   border-radius: 8px;
    color: #fff;
    cursor: pointer;
-   font-size: 18px;
-   padding: 12px;
-   transition: 0.5s ease-in-out;
-   transition-delay: 0.25s;
+   font-size: 15px;
+   padding: 10px;
  }
 
 .form-container {
@@ -66,7 +73,7 @@ body {
    box-shadow: 0 0 20px 1px #ffffff;
    padding: 50px;
    width: 650px;
-   max-width: 90%;
+   max-width: 100%;
 }
 
 .form-container h1 {
@@ -74,11 +81,20 @@ body {
    font-size: 30px;
    font-weight: 700;
    margin-bottom: 32px;
+   margin-top: 30px;
    text-align: center;
 }
 
 .form-group {
    margin-bottom: 24px;
+}
+
+.form-group label {
+   display: block;
+   color: white;
+   font-size: 16px;
+   font-weight: 700;
+   margin-bottom: 8px;
 }
 
 .form-group label {
@@ -105,6 +121,21 @@ body {
 }
 
 .submit-btn {
+   background-color: #5e3ad4;
+   border: none;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 700;
+   padding: 12px;
+   width: 100%;
+   transition: background-color 0.25s ease-in-out;
+   transition-delay: 0.25s;
+}
+
+.registrarse {
+   margin-top: 15px;
    background-color: #5e3ad4;
    border: none;
    border-radius: 4px;
@@ -230,6 +261,7 @@ body {
    color: #FFFFFF;
    font-family: sans-serif;
    background-repeat: no-repeat;
+   z-index: 3;
 }
 
 .titulo {
@@ -256,6 +288,7 @@ body {
    border: black;
    margin-left: 22%;
    margin-right: 10%;
+   z-index: 3;
 }
 .boton:hover {
    background-color: #412796;
