@@ -55,7 +55,7 @@ div {
    width: 100%;
    font-family: Tahoma;
    border: 10px solid #e7e7e7;
-   background-image: url(images/banner.png);
+   background-image: url(../images/banner.png);
    background-size: contain;
    background-repeat: no-repeat;
 }
