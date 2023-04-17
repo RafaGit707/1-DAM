@@ -1,0 +1,238 @@
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body {
+   margin-left: 15%;
+   margin-right: 15%;
+   background-color: #e7e7e7;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+div {
+   display: inline-block;
+   overflow: hidden;
+   padding: 15px;
+   background-color: #FFFFFF;
+}
+
+/*** TOPHEADER MENU NAV ***/
+
+.topheader {
+   display: inline;
+   width: fit-content;
+   background-color: white;
+}
+.logo {
+   margin-bottom: 15px;
+}
+.ul_enlaces {
+   float: right;
+   width: fit-content;
+   padding: 15px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   background-color: black;
+}
+.listenlaces {
+   display: inline;
+}
+.enlaces {
+   color: #FFFFFF;
+   text-decoration: none;
+   padding: 16px;
+}
+.enlaces:hover {
+   background-color: #ffcc33;
+}
+
+/*** HEADER ***/
+
+.header1 {
+   display: block;
+   width: 100%;
+   font-family: Tahoma;
+   border: 10px solid #e7e7e7;
+   background-image: url(images/banner.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+.h1_header {
+   border-bottom: dotted 1px;
+   font-size: 190%;
+   line-height: 160%;
+   margin-bottom: 10px;
+}
+.article_header {
+   display: block;
+   width: 45%;
+   padding: 8% 0% 8% 8%;
+   font-family: Tahoma;
+   font-size: 130%;
+   line-height: 160%;
+}
+.a_header {
+   display: block;
+   width: 65%;
+   margin-top: 10px;
+   font-family: Tahoma;
+   background-color: #272727;
+   color: #FFFFFF;
+   font-size: 70%;
+   padding: 2%;
+   text-align: center;
+   border: none;
+   text-decoration: none;
+}
+
+/*** MAIN ***/
+
+main {
+   display: inline-block;
+   height: fit-content;
+   width: fit-content;
+}
+
+/*** SECTION SERVICES ***/
+
+.services {
+   display: inline-block;
+   width: 60%;
+   padding: 1% 2% 1% 2%;
+   line-height: 140%;
+}
+.h2_services {
+   border-bottom: dotted 1px;
+   font-size: 160%;
+   line-height: 150%;
+   margin-bottom: 15px;
+}
+.services_articles {
+   float: left;
+   padding: 10px 10px 10px 0px;
+}
+p {
+   line-height: 130%;
+   margin-top: 15px;
+}
+.img_services {
+   float: left;
+   padding: 10px;
+   margin-right: 15px;
+   margin-bottom: 10px;
+   border: 1px solid #e7e7e7;
+}
+.a_readmore {
+   text-decoration: none;
+   color: black;
+}
+
+.about {
+   display: inline-block;
+   position: relative;
+   width: 60%;
+   padding: 1% 2% 1% 2%;
+   line-height: 140%;
+}
+
+.testimonials {
+   display: inline-block;
+   position: relative;
+   width: 60%;
+   padding: 1% 2% 2% 2%;
+   line-height: 140%;
+}
+
+/*** ASIDE BARRA LATERAL NEWS ***/
+
+.news {
+   display: inline-block;
+   position: absolute;
+   right: 15%;
+   width: 27%;
+   margin-right: 15px;
+   padding: 1.4%;
+   height: fit-content;
+   background-color: #ffffff;
+}
+time {
+   display: inline;
+   float: right;
+   padding: 10px;
+   background-color: #ffcc33;
+}
+.article_news {
+   display: inline-block;
+   padding: 15px 15px 15px 0px;
+   margin-bottom: 10px;
+   line-height: 150%;
+   border-bottom: dotted 1px;
+}
+.weServeFreshIdeas {
+   padding: 4%;
+   width: fit-content;
+   border: 1px solid #e7e7e7;
+}
+
+/*** FOOTER ***/
+
+.footer {
+   display: inline-block;
+   height: max-content;
+   width: 100%;
+   background-color: black;
+}
+.footer_text1 {
+   display: inline;
+   float: left;
+   font-size: 90%;
+   color: #f2f2f2;
+   text-align: left;
+   padding: 1%;
+   margin-left: 10%;
+}
+.footer_text2 {
+   display: inline;
+   float: right;
+   font-size: 90%;
+   color: #f2f2f2;
+   text-align: right;
+   padding: 1%;
+   margin-right: 10%;
+}
+
+/*** @media RESPONSIVE ***/
+
+/*** RESPONSIVE PARA TABLET ***/
+
+@media (max-width: 1800px) {
+   .topheader {
+      zoom: 90%;
+   }
+   .weServeFreshIdeas {
+      zoom: 90%;
+   }
+}
+@media (max-width: 1500px) {
+   .topheader {
+      zoom: 80%;
+   }
+}
+@media (max-width: 1400px) {
+   .topheader {
+      zoom: 70%;
+   }
+   .weServeFreshIdeas {
+      zoom: 80%;
+   }
+}
+@media (max-width: 1024px) {
+   .topheader {
+      zoom: 55%;
+   }
+   .weServeFreshIdeas {
+      zoom: 65%;
+   }
+}
