@@ -10,8 +10,10 @@
   </head>
 
   <body>
-
-    <div id="container" class="container">
+    
+    <div id="mostrar" class="container">
+      <div class="fondo"></div>
+      <div class="contenido">
       <form class="form-container">
         <h1>Iniciar sesión</h1>
         <div class="form-group">
@@ -23,7 +25,9 @@
           <input type="password" id="password" name="password" required>
         </div>
         <button class="submit-btn" type="submit">Iniciar sesión</button>
+        <a id="cerrar" class="cerrar" href="#">Cerrar</a>
       </form>
+    </div>
     </div>
 
     <!--MENU TOPHEADER -->
@@ -65,7 +69,7 @@
 
         <li class = "twitter"><a href=https://twitter.com/massfitness><img src="images/twitter.png" width = 50 height = 25 /></a></li>
         <li class = "facebook"><a href=https://es-es.facebook.com/massfitness><img src="images/facebook.png" width = 25 height = 25 /></a></li>
-        <button class="iniciar_sesion" type="button" >Iniciar Sesion</button>
+        <a class="iniciar_sesion" href="#mostrar">Iniciar Sesion</a>
       </ul>
       
     </nav>
@@ -79,7 +83,7 @@
           <b>
           <h1 class = "mensaje">Where Fitness <br> Becomes Your <br> Lifestyle</h1>
           </b>
-          <a href="clases.html"><button class="boton" type="button" >Reservar</button></a>
+          <a href="clases.html"><button id="filtrar" class="boton" type="button" >Reservar</button></a>
         </section>
       </header>
 
@@ -103,11 +107,11 @@
       <aside class="aside">
         <b><p class="clasestitulo">Nuestras Clases</p></b>
         <hr>
-        <b><p class="clases">Base HIIT</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button class="boton2" type="button" >Reservar</button></a>
+        <b><p class="clases">Base HIIT</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button id="filtrar" class="boton2" type="button" >Reservar</button></a>
         <hr>
-        <b><p class="clases">Base Strenght</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button class="boton2" type="button" >Reservar</button></a>
+        <b><p class="clases">Base Strenght</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button id="filtrar" class="boton2" type="button" >Reservar</button></a>
         <hr>
-        <b><p class="clases">Base Endurance</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button class="boton2" type="button" >Reservar</button></a>
+        <b><p class="clases">Base Endurance</p></b><p class="clases_mid">45 min</p><a href="clases.html"><button id="filtrar" class="boton2" type="button" >Reservar</button></a>
         <hr>
       </aside>
 
