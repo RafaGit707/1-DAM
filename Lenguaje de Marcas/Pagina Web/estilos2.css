@@ -135,7 +135,6 @@ body {
  }
 
 .registrarse {
-   display: block;
    margin-top: 15px;
    background-color: #5e3ad4;
    text-decoration: none;
@@ -147,6 +146,19 @@ body {
    font-size: 18px;
    font-weight: 700;
    padding: 12px;
+   width: 100%;
+   transition: background-color 0.25s ease-in-out;
+   transition-delay: 0.1s;
+}
+
+.cuenta_p {
+   display: block;
+   margin-top: 24px;
+   text-decoration: none;
+   text-align: center;
+   border: none;
+   color: #fff;
+   font-size: 18px;
    width: 100%;
    transition: background-color 0.25s ease-in-out;
    transition-delay: 0.1s;
