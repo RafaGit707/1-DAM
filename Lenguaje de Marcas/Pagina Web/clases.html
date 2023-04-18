@@ -11,15 +11,62 @@
 
 <body>
 
-  <!--MENU TOPHEADER -->
+  <!--FORMULARIO INICIO SESION -->
+
+  <div id="mostrar" class="container">
+    <div class="fondo"></div>
+    <div class="contenido">
+      <form class="form-container">
+        <h1>Iniciar sesión</h1>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <button class="submit-btn" type="submit">Iniciar sesión</button>
+        <a href="#registro" class="registrarse">Registrarse</a>
+        <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X" id="X"></a>
+      </form>
+    </div>
+  </div>
   
+  <div id="registro" class="container">
+    <div class="fondo"></div>
+    <div class="contenido">
+      <form class="form-container">
+        <h1>Registrarse</h1>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button class="submit-btn" type="submit">Registrarse</button>
+        <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X" id="X"></a>
+      </form>
+    </div>
+  </div> 
+
+  <!--MENU TOPHEADER -->
+
   <nav class="topheader">
 
     <input type="checkbox" id="check">
 
-    <li class = "twitter2"><a href=https://twitter.com/massfitness><img src="images/twitter.png" width = 50 height = 25 /></a></li>
-    <li class = "facebook2"><a href=https://es-es.facebook.com/massfitness><img src="images/facebook.png" width = 25 height = 25 /></a></li>
-    
+    <ul>
+      <li class = "twitter2"><a href=https://twitter.com/massfitness><img src="images/twitter.png" width = 50 height = 25 /></a></li>
+      <li class = "facebook2"><a href=https://es-es.facebook.com/massfitness><img src="images/facebook.png" width = 25 height = 25 /></a></li>
+    </ul>
+
     <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
     </label>
@@ -29,6 +76,7 @@
     </a>
 
     <ul class="ul_general">
+
       <li class="li_enlaces"><a class="enlaces" href = "index.html">Home</a></li>
       <li class="li_enlaces"><a class="enlaces" href = "sobre.html">Sobre</a></li>
         
@@ -47,7 +95,9 @@
 
       <li class = "twitter"><a href=https://twitter.com/massfitness><img src="images/twitter.png" width = 50 height = 25 /></a></li>
       <li class = "facebook"><a href=https://es-es.facebook.com/massfitness><img src="images/facebook.png" width = 25 height = 25 /></a></li>
+      <a class="iniciar_sesion" href="#mostrar">Iniciar Sesion</a>
     </ul>
+    
   </nav>
 
   <!-- CLASES -->
