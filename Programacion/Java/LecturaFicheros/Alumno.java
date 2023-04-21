@@ -52,7 +52,7 @@ public class Alumno {
 
         List<Alumno> alumnos = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("ficheroAlumnos.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("Programacion/Java/LecturaFicheros/ficheroAlumnos.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split("\\t");
