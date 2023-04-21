@@ -53,13 +53,14 @@ public class Alumno {
         List<Alumno> alumnos = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader("Programacion/Java/LecturaFicheros/ficheroAlumnos.txt"))) {
+            br.readLine();
             String line;
             while ((line = br.readLine()) != null) {
-                String[] values = line.split("\\t");
+                String[] values = line.split("\\s+");
 
                 String sexo = values[0];
                 int edad = Integer.parseInt(values[1]);
-                double estatura = Double.parseDouble(values[2]);
+                double estatura = Double.parseDouble(values[2].replace(',', '.'));
                 int puntuacion1 = Integer.parseInt(values[3]);
                 int puntuacion2 = Integer.parseInt(values[4]);
                 String calificacion = values[5];
