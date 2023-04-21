@@ -1,5 +1,3 @@
-package Java.LecturaFicheros;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,52 +5,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Alumno {
-    private String sexo;
-    private int edad;
-    private double estatura;
-    private int puntuacion1;
-    private int puntuacion2;
-    private String calificacion;
-
-    public Alumno(String sexo, int edad, double estatura, int puntuacion1, int puntuacion2, String calificacion) {
-        this.sexo = sexo;
-        this.edad = edad;
-        this.estatura = estatura;
-        this.puntuacion1 = puntuacion1;
-        this.puntuacion2 = puntuacion2;
-        this.calificacion = calificacion;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public int getPuntuacion1() {
-        return puntuacion1;
-    }
-
-    public int getPuntuacion2() {
-        return puntuacion2;
-    }
-
-    public String getCalificacion() {
-        return calificacion;
-    }
-
+public class Main {
     public static void main(String[] args) {
 
         List<Alumno> alumnos = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("Programacion/Java/LecturaFicheros/ficheroAlumnos.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("ficheroAlumnos.txt"))) {
             br.readLine();
             String line;
             while ((line = br.readLine()) != null) {
@@ -96,4 +54,3 @@ public class Alumno {
         System.out.println("Número de mujeres suspensas: " + numMujeresSuspenso);
     }
 }
-
