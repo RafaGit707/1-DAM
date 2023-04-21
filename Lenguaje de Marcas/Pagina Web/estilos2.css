@@ -187,7 +187,7 @@ body {
 #cerrar:hover {
    transform: scale(1.2);
 }
- 
+
 /*** MENU TOPHEADER ***/
 
 .topheader {
@@ -201,6 +201,8 @@ body {
 .li_enlaces {
    display: inline-block;
    color: #FFFFFF;
+   text-decoration: none;
+   list-style: none;
    margin-left: 5%;
 }
 .enlaces {
@@ -208,11 +210,16 @@ body {
    list-style: none;
    color: #FFFFFF;
 }
+/* Establece la animación de desplazamiento */
+html {
+  scroll-behavior: smooth;
+}
 .enlaces:hover {
    color: #5e3ad4;
 }
 .li_topheader {
    display: inline-block;
+   color: #FFFFFF;
    text-decoration: none;
    list-style: none;
    margin-left: 5%;
@@ -242,6 +249,18 @@ body {
 .li_topheader:hover > .ul_desplegable {
    display:block;
 }
+.twitter {
+   display: flex;
+   float: right;
+   list-style: none;
+   margin-right: 1%;
+}
+.facebook {
+   display: flex;
+   float: right;
+   list-style: none;
+   margin-right: 1%;
+}
 .iniciar_sesion {
    display: inline;
    float: right;
@@ -255,18 +274,7 @@ body {
    padding: 7px 12px;
    cursor: pointer;
 }
-.twitter {
-   display: flex;
-   float: right;
-   list-style: none;
-   margin-right: 1%;
-}
-.facebook {
-   display: flex;
-   float: right;
-   list-style: none;
-   margin-right: 1%;
-}
+ 
 .twitter2 {
    display: none;
 }

@@ -209,6 +209,10 @@ body {
    list-style: none;
    color: #FFFFFF;
 }
+/* Establece la animación de desplazamiento */
+html {
+  scroll-behavior: smooth;
+}
 .enlaces:hover {
    color: #5e3ad4;
 }
