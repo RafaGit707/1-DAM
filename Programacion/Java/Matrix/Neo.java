@@ -6,11 +6,13 @@ public class Neo extends Personaje {
 
     private boolean esElegido;
     private int capacidadDestruccion;
+    private int posicion;
 
-    public Neo(int id, String nombre, String ciudadNacimiento, String fechaCreacion, int edad, int probabilidadMorir, boolean esElegido, int capacidadDestruccion) {
+    public Neo(int id, String nombre, String ciudadNacimiento, String fechaCreacion, int edad, int probabilidadMorir, boolean esElegido, int capacidadDestruccion, int posicion) {
         super(id, nombre, ciudadNacimiento, fechaCreacion, edad, probabilidadMorir);
         this.esElegido = esElegido;
         this.capacidadDestruccion = capacidadDestruccion;
+        this.posicion = posicion;
     }
 
     public boolean esElegido() {
@@ -19,6 +21,10 @@ public class Neo extends Personaje {
 
     public int getCapacidadDestruccion() {
         return capacidadDestruccion;
+    }
+
+    public int getPosicion() {
+        return posicion;
     }
 
     public void setEsElegido(boolean esElegido) {
@@ -47,7 +53,8 @@ public class Neo extends Personaje {
                 System.out.println(smith.mostrarInformacion());
                 personajes.remove(smith);
             }
-            DepositoVirus.agregarVirus(new Smith(smiths));
+            Smith virus = new Smith(smiths.get(0).getId(), "Virus Smith", "Desconocida", "12:00", 0, 0, 100);
+            DepositoVirus.agregarVirus(virus);
         } else {
             System.out.println("Neo no ha encontrado ningún Smith para atacar.");
         }
@@ -56,6 +63,6 @@ public class Neo extends Personaje {
     @Override
     public String mostrarInformacion() {
         String tipo = esElegido ? "Neo (Elegido)" : "Neo";
-        return String.format("%s - %s - Poder: %d - Capacidad de destrucción: %d", tipo, super.mostrarInformacion(), poder, capacidadDestruccion);
+        return String.format("%s - %s - Capacidad de destrucción: %d", tipo, super.mostrarInformacion(), capacidadDestruccion);
     }
 }

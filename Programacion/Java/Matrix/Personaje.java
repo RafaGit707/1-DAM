@@ -15,6 +15,7 @@ public abstract class Personaje {
     private String fechaCreacion;
     private int edad;
     private int probabilidadMorir;
+    private int posicion;
 
     public Personaje(int id, String nombre, String ciudadNacimiento, String fechaCreacion, int edad, int probabilidadMorir) {
         this.id = id;
@@ -55,6 +56,14 @@ public abstract class Personaje {
 
     public void setProbabilidadMorir(int probabilidadMorir) {
         this.probabilidadMorir = probabilidadMorir;
+    }
+
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
     }
 
     public abstract void mostrarInformacion();
