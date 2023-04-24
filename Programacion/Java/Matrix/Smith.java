@@ -48,3 +48,4 @@ public class Smith extends Personaje {
         System.out.println();
     }
 }
+

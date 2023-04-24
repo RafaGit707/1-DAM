@@ -1,6 +1,4 @@
-package Java.Matrix;
-
-import java.util.ArrayList;
+package Java.Matrix;import java.util.ArrayList;
 
 public class Neo extends Personaje {
 
