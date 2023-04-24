@@ -5,6 +5,7 @@
    box-sizing: border-box;
    max-width: 100%;
 }
+
 body {
    background-color: #FFFFFF;
    font-family: Arial, Helvetica, sans-serif;
@@ -290,7 +291,6 @@ html {
 
 /*** HEADER ***/
 
-
 .header1 {
    background-image: url("images/fondo.jpg");
    background-attachment: fixed;
@@ -320,7 +320,7 @@ html {
    margin-top: -22%;
    background-color: #5e3ad4;
    font-size: 100%;
-   padding: 0.7% 1.5%;
+   padding: 0.7% 2%;
    border: black;
    margin-left: 22%;
    margin-right: 10%;
