@@ -141,7 +141,6 @@ body {
    cursor: pointer;
    font-size: 18px;
    text-decoration-color:grey;
-
    border: none;
    font-weight: 700;
    transition: background-color 0.25s ease-in-out;

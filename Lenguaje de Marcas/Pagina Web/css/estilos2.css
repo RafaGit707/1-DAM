@@ -352,7 +352,7 @@ html {
 }
 .fotoinfo {
    width: 100%;
-   background-image: url("images/fondosobre.jpg");
+   background-image: url("../images/fondosobre.jpg");
    background-attachment: fixed;
    background-size: cover;
    background-repeat: no-repeat;
@@ -382,7 +382,7 @@ html {
 }
 .fotoinfo2 {
    display: inline;
-   background-image: url("images/trainer1.png");
+   background-image: url("../images/trainer1.png");
    background-repeat: no-repeat;
    background-size: 100%;
    width: 40%;
