@@ -13,7 +13,6 @@ public class Matrix {
         random = new Random();
     }
 
-
     public ArrayList<Personaje> getPersonajes() {
         return personajes;
     }

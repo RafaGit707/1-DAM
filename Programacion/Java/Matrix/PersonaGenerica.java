@@ -8,7 +8,7 @@ public class PersonaGenerica extends Personaje {
 
     @Override
     public String mostrarInformacion() {
-        return String.format("%s - %s - Capacidad de destrucción: %d", super.mostrarInformacion());
+        return String.format(mostrarInformacion());
     }
 }
 

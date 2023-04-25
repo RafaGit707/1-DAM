@@ -61,6 +61,6 @@ public class Neo extends Personaje {
     @Override
     public String mostrarInformacion() {
         String tipo = esElegido ? "Neo (Elegido)" : "Neo";
-        return String.format("%s - %s - Capacidad de destrucción: %d", tipo, super.mostrarInformacion(), capacidadDestruccion);
+        return String.format("%s - %s - Capacidad de destrucción: %d", tipo, mostrarInformacion(), capacidadDestruccion);
     }
 }

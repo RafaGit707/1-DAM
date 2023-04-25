@@ -37,15 +37,15 @@ public class Smith extends Personaje {
     }
 
     @Override
-    public void mostrarInformacion() {
-        System.out.println("ID: " + getId());
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Ciudad de nacimiento: " + getCiudadNacimiento());
-        System.out.println("Fecha y hora de creación: " + getFechaCreacion());
-        System.out.println("Edad: " + getEdad());
-        System.out.println("Probabilidad de morir: " + getProbabilidadMorir());
-        System.out.println("Capacidad de infección: " + capacidadInfeccion);
-        System.out.println();
+    public String mostrarInformacion() {
+        String info = "ID: " + getId() + "\n" +
+                  "Nombre: " + getNombre() + "\n" +
+                  "Ciudad de nacimiento: " + getCiudadNacimiento() + "\n" +
+                  "Fecha y hora de creación: " + getFechaCreacion() + "\n" +
+                  "Edad: " + getEdad() + "\n" +
+                  "Probabilidad de morir: " + getProbabilidadMorir() + "\n" +
+                  "Capacidad de infección: " + getCapacidadInfeccion() + "\n\n";
+    return info;
     }
 }
 
