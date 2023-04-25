@@ -13,6 +13,7 @@ public class Matrix {
         random = new Random();
     }
 
+
     public ArrayList<Personaje> getPersonajes() {
         return personajes;
     }
@@ -47,13 +48,17 @@ public class Matrix {
     }
 
     public static void reemplazarPersonaje(Personaje viejoPersonaje, Personaje nuevoPersonaje) {
-        ArrayList<Personaje> personajes = DepositoVirus.getPersonajes();
+        
+        Matrix matrix = new Matrix();
+        ArrayList<Personaje> personajes = matrix.getPersonajes();
+
         int index = personajes.indexOf(viejoPersonaje);
         if (index >= 0) {
             personajes.set(index, nuevoPersonaje);
             System.out.println(viejoPersonaje.getNombre() + " ha sido reemplazado por " + nuevoPersonaje.getNombre() + " en la Matrix.");
         }
     }
+
 
     public static void main(String[] args) {
         Matrix matrix = new Matrix();

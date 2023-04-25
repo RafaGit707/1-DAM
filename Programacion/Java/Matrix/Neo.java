@@ -48,7 +48,7 @@ public class Neo extends Personaje {
         if (!smiths.isEmpty()) {
             System.out.println("Neo ha eliminado a los siguientes Smiths:");
             for (Personaje smith : smiths) {
-                System.out.println(smith.mostrarInformacion());
+                smith.mostrarInformacion();
                 personajes.remove(smith);
             }
             Smith virus = new Smith(smiths.get(0).getId(), "Virus Smith", "Desconocida", "12:00", 0, 0, 100);

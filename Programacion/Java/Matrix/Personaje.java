@@ -6,7 +6,7 @@ import java.util.Random;
 public abstract class Personaje {
     
     private static final Random random = new Random();
-    private static final String[] ciudades = {"Madrid", "New York", "Pekin", "Leganés", "Londres", "Paris"};
+    protected static final String[] ciudades = {"Madrid", "New York", "Pekin", "Leganés", "Londres", "Paris"};
     private static final String[] nombres = {"Juan", "Pedro", "María", "Ana", "Luis", "Carlos", "Sofía", "Lucía", "Elena", "Miguel"};
 
     private int id;
@@ -66,7 +66,7 @@ public abstract class Personaje {
         this.posicion = posicion;
     }
 
-    public abstract void mostrarInformacion();
+    public abstract String mostrarInformacion();
 
     @Override
     public String toString() {

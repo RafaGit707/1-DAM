@@ -19,7 +19,7 @@ public class FactoriaPersonas {
             String nombre = nombres[random.nextInt(nombres.length)];
             String ciudadNacimiento = ciudades[random.nextInt(ciudades.length)];
             int edad = random.nextInt(81);
-            double probabilidadMorir = random.nextDouble() * 100;
+            int probabilidadMorir = random.nextInt() * 100;
 
             personas.add(new PersonaGenerica(id, nombre, ciudadNacimiento, edad, probabilidadMorir));
         }
