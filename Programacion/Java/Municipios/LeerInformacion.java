@@ -13,15 +13,15 @@ public class LeerInformacion {
         ArrayList<Municipio> municipios = new ArrayList<Municipio>();
         BufferedReader br = null;
         String line = "";
-        String cvsSplitBy = ";";
+        String cvsSplitBy1 = ";";
 
         try {
             br = new BufferedReader(new FileReader("PoblacionMunicipiosMalaga.csv"));
             while ((line = br.readLine()) != null) {
-                String[] poblacion = line.split(cvsSplitBy);
-                if (año == null || año.equals(Integer.parseInt(poblacion[0]))) {
+                String[] registro = line.split(cvsSplitBy1);
+                if (año == null || año.equals(Integer.parseInt(registro[3]))) {
                     if (poblacion[1].equals("Todos")) {
-                        Municipio m = new Municipio(poblacion[2], poblacion[3], Integer.parseInt(poblacion[0]), Integer.parseInt(poblacion[4]));
+                        Municipio m = new Municipio(registro[0], registro[2], Integer.parseInt(registro[3]), Integer.parseInt(registro[4]));
                         municipios.add(m);
                     }
                 }
@@ -53,14 +53,14 @@ public class LeerInformacion {
         return municipioBuscado;
     }
 
-    public static HashMap<String, Integer> IncrementoPoblacion(ArrayList<Municipio> coleccionMunicipios, int year1, int year2) {
+    public static HashMap<String, Integer> IncrementoPoblacion(ArrayList<Municipio> coleccionMunicipios, int año1, int año2) {
         HashMap<String, Integer> incrementos = new HashMap<String, Integer>();
         for (int i = 0; i < coleccionMunicipios.size(); i++) {
             Municipio m1 = coleccionMunicipios.get(i);
-            if (m1.getAño() == year1) {
+            if (m1.getAño() == año1) {
                 for (int j = i + 1; j < coleccionMunicipios.size(); j++) {
                     Municipio m2 = coleccionMunicipios.get(j);
-                    if (m2.getAño() == year2 && m1.getNombre().equals(m2.getNombre())) {
+                    if (m2.getAño() == año2 && m1.getNombre().equals(m2.getNombre())) {
                         incrementos.put(m1.getNombre(), m2.getPoblacion() - m1.getPoblacion());
                         break;
                     }
