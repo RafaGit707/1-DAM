@@ -1,7 +1,5 @@
 package Java.Municipios;
 
-import java.util.Objects;
-
 public class Municipio implements Comparable<Municipio> {
 
     private String codigoPostal;
@@ -49,29 +47,35 @@ public class Municipio implements Comparable<Municipio> {
     }
 
     @Override
-    public String toString() {
-        return nombre + " (" + año + ") : " + poblacion;
-    }
-
-    @Override
     public int compareTo(Municipio o) {
-        if (nombre.equals(o.nombre)) {
-            return año - o.año;
+        if (this.nombre.equals(o.nombre)) {
+            return this.año - o.año;
+        } else {
+            return this.nombre.compareTo(o.nombre);
         }
-        return nombre.compareTo(o.nombre);
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Municipio municipio = (Municipio) o;
-        return año == municipio.año && Objects.equals(nombre, municipio.nombre);
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Municipio)) {
+            return false;
+        }
+        Municipio other = (Municipio) obj;
+        return this.nombre.equals(other.nombre) && this.año == other.año;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nombre, año);
+        return this.nombre.hashCode() + this.año;
     }
+
+    @Override
+    public String toString() {
+        return this.nombre + " (" + this.año + "): " + this.poblacion;
+    }
+
 }
 

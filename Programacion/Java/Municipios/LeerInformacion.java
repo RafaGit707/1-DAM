@@ -19,9 +19,9 @@ public class LeerInformacion {
             br = new BufferedReader(new FileReader("PoblacionMunicipiosMalaga.csv"));
             while ((line = br.readLine()) != null) {
                 String[] poblacion = line.split(cvsSplitBy);
-                if ((año == null || año.equals(Integer.parseInt(poblacion[0]))) {
+                if (año == null || año.equals(Integer.parseInt(poblacion[0]))) {
                     if (poblacion[1].equals("Todos")) {
-                        Municipio m = new Municipio(poblacion[2], Integer.parseInt(poblacion[0]), poblacion[3], Integer.parseInt(poblacion[4]));
+                        Municipio m = new Municipio(poblacion[2], poblacion[3], Integer.parseInt(poblacion[0]), Integer.parseInt(poblacion[4]));
                         municipios.add(m);
                     }
                 }
