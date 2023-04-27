@@ -77,6 +77,4 @@ public abstract class Personaje {
                 ", Edad: " + edad +
                 ", Probabilidad de Morir: " + probabilidadMorir + "%";
     }
-
-    List<Personaje> personas = FactoriaPersonas.crearPersonas(200);
 }

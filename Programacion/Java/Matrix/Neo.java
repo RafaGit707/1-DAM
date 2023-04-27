@@ -1,4 +1,6 @@
-package Java.Matrix;import java.util.ArrayList;
+package Java.Matrix;
+
+import java.util.ArrayList;
 
 public class Neo extends Personaje {
 
@@ -57,10 +59,11 @@ public class Neo extends Personaje {
             System.out.println("Neo no ha encontrado ningún Smith para atacar.");
         }
     }
-
+    
     @Override
     public String mostrarInformacion() {
         String tipo = esElegido ? "Neo (Elegido)" : "Neo";
-        return String.format("%s - %s - Capacidad de destrucción: %d", tipo, mostrarInformacion(), capacidadDestruccion);
+        String info = "%s - %s - Capacidad de destrucción: %d" + getCapacidadDestruccion() + tipo;
+    return info;
     }
 }

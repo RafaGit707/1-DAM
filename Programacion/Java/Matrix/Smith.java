@@ -24,7 +24,7 @@ public class Smith extends Personaje {
             Random random = new Random();
             int numAleatorio = random.nextInt(101);
             if (numAleatorio <= capacidadInfeccion) {
-                System.out.println("El agente Smith " + this.getNombre() + " ha infectado a " + personaje.getNombre());
+                System.out.println(this.getNombre() + " ha infectado a " + personaje.getNombre());
                 Smith nuevoSmith = new Smith(personaje.getId(), personaje.getNombre(), personaje.getCiudadNacimiento(), "12:00", 0, 0, capacidadInfeccion);
                 Matrix.reemplazarPersonaje(personaje, nuevoSmith);
             }
@@ -48,4 +48,3 @@ public class Smith extends Personaje {
     return info;
     }
 }
-

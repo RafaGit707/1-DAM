@@ -30,7 +30,6 @@ public class DepositoVirus {
         for (Smith smith : virus) {
             smith.mostrarInformacion();
             System.out.println("Capacidad de infección: " + smith.getCapacidadInfeccion());
-            System.out.println();
         }
     }
 
