@@ -1,6 +1,5 @@
 package Java.Matrix;
 
-import java.util.List;
 import java.util.Random;
 
 public abstract class Personaje {
