@@ -6,22 +6,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 public class LeerInformacion {
 
     public static ArrayList<Municipio> LeerFicheroMunicipio(Integer año) {
-        ArrayList<Municipio> municipios = new ArrayList<Municipio>();
+        ArrayList<Municipio> municipios = new ArrayList<>();
         BufferedReader br = null;
         String line = "";
-        String cvsSplitBy1 = ";";
-
+        final String split1 = ";";
+        final String split2 = " ";
+    
         try {
-            br = new BufferedReader(new FileReader("PoblacionMunicipiosMalaga.csv"));
+            br = new BufferedReader(new FileReader("../1-DAM/Programacion/Java/Municipios/PoblacionMunicipiosMalaga.csv"));
             while ((line = br.readLine()) != null) {
-                String[] registro = line.split(cvsSplitBy1);
-                if (año == null || año.equals(Integer.parseInt(registro[3]))) {
-                    if (poblacion[1].equals("Todos")) {
-                        Municipio m = new Municipio(registro[0], registro[2], Integer.parseInt(registro[3]), Integer.parseInt(registro[4]));
+                String[] registro = line.split(split1);
+                String[] codPostal = registro[0].split(split2);
+                
+                // registro[0] = codPostal y el nombre
+                // registro[2] = año
+                // registro[3] = poblacion
+
+                if (año == null || (registro[2].matches("\\d+") && año.equals(Integer.parseInt(registro[2])))) {
+                    if (registro[1].equals("Todos")) {
+                        Municipio m = new Municipio(codPostal[0], codPostal[1], Integer.parseInt(registro[2]), Integer.parseInt(registro[3]));
                         municipios.add(m);
                     }
                 }
@@ -37,10 +45,11 @@ public class LeerInformacion {
                 }
             }
         }
-
+    
         Collections.sort(municipios);
         return municipios;
     }
+    
 
     public static Municipio BuscarMunicipio(ArrayList<Municipio> coleccionMunicipios, String nombre, Integer año) {
         Municipio municipioBuscado = null;
@@ -52,9 +61,9 @@ public class LeerInformacion {
         }
         return municipioBuscado;
     }
-
-    public static HashMap<String, Integer> IncrementoPoblacion(ArrayList<Municipio> coleccionMunicipios, int año1, int año2) {
-        HashMap<String, Integer> incrementos = new HashMap<String, Integer>();
+    
+    public static Map<String, Integer> IncrementoPoblacion(ArrayList<Municipio> coleccionMunicipios, int año1, int año2) {
+        Map<String, Integer> incrementos = new HashMap<>();
         for (int i = 0; i < coleccionMunicipios.size(); i++) {
             Municipio m1 = coleccionMunicipios.get(i);
             if (m1.getAño() == año1) {

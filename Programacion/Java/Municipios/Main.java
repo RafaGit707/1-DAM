@@ -46,13 +46,18 @@ public class Main {
         
         // Municipio menos poblado en 2021
         ArrayList<Municipio> municipios2021 = LeerInformacion.LeerFicheroMunicipio(2021);
-        Municipio menosPoblado = municipios2021.get(0);
-        for (Municipio municipio : municipios2021) {
-            if (municipio.getPoblacion() < menosPoblado.getPoblacion()) {
-                menosPoblado = municipio;
+        if (!municipios2021.isEmpty()) {
+            Municipio menosPoblado = municipios2021.get(0);
+            for (Municipio municipio : municipios2021) {
+                if (municipio.getPoblacion() < menosPoblado.getPoblacion()) {
+                    menosPoblado = municipio;
+                }
             }
+            System.out.println("Municipio menos poblado en 2021: " + menosPoblado);
+        } else {
+            System.out.println("La lista de municipios en 2021 está vacía.");
         }
-        System.out.println("Municipio menos poblado en 2021: " + menosPoblado);
+
     }
 }
 
