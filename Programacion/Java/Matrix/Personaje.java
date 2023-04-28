@@ -5,8 +5,6 @@ import java.util.Random;
 public abstract class Personaje {
     
     private static final Random random = new Random();
-    protected static final String[] ciudades = {"Madrid", "New York", "Pekin", "Leganés", "Londres", "Paris"};
-    private static final String[] nombres = {"Juan", "Pedro", "María", "Ana", "Luis", "Carlos", "Sofía", "Lucía", "Elena", "Miguel"};
 
     private int id;
     private String nombre;
@@ -18,8 +16,8 @@ public abstract class Personaje {
 
     public Personaje(int id, String nombre, String ciudadNacimiento, String fechaCreacion, int edad, int probabilidadMorir) {
         this.id = id;
-        this.nombre = nombres[random.nextInt(nombres.length)];
-        this.ciudadNacimiento = ciudades[random.nextInt(ciudades.length)];
+        this.nombre = nombre;
+        this.ciudadNacimiento = ciudadNacimiento;
         this.fechaCreacion = fechaCreacion;
         this.edad = 0;
         this.probabilidadMorir = random.nextInt(101);
