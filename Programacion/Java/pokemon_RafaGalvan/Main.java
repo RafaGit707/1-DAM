@@ -2,15 +2,17 @@ package Programacion.Java.pokemon_RafaGalvan;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        
         // Crear instancia de Pokedex
         Pokedex pokedex = new Pokedex("pokemon.json");
 
         // Obtener los 5 últimos pokemons
-        List<Pokemon> lastFive = pokedex.getUltimosPokemon();
+        ArrayList<Pokemon> ultimosCinco = pokedex.getUltimosPokemon();
 
         // Obtener datos de Pikachu
         Pokemon pikachu = pokedex.getPokemonByName("Pikachu");
@@ -25,16 +27,16 @@ public class Main {
         List<Pokemon> weakPokemons = pokedex.getPokemonPorDebilidades("electric");
 
         // Obtener pokemon con más debilidades
-        Pokemon mostWeaknessesPokemon = pokedex.getPokemonConMasDebilidades();
+        Pokemon pokemonConMasDebilidades = pokedex.getPokemonConMasDebilidades();
 
         // Obtener pokemon más alto
-        Pokemon tallestPokemon = pokedex.getPokemonMasAlto();
+        Pokemon pokemonMasAlto = pokedex.getPokemonMasAlto();
 
         // Guardar información en un archivo
         try {
             FileWriter writer = new FileWriter("consultasPokemon.txt");
             writer.write("Últimos 5 pokemons:\n");
-            for (Pokemon pokemon : lastFive) {
+            for (Pokemon pokemon : ultimosCinco) {
                 writer.write(pokemon.getName() + "\n");
             }
             writer.write("\nDatos de Pikachu:\n");
@@ -52,9 +54,9 @@ public class Main {
                 writer.write(pokemon.getName() + "\n");
             }
             writer.write("\nPokemon con más debilidades:\n");
-            writer.write(mostWeaknessesPokemon.getName() + "\n");
+            writer.write(pokemonConMasDebilidades.getName() + "\n");
             writer.write("\nPokemon más alto:\n");
-            writer.write(tallestPokemon.toString() + "\n");
+            writer.write(pokemonMasAlto.toString() + "\n");
             writer.close();
         } catch (IOException e) {
             System.out.println("Error al escribir en el archivo.");

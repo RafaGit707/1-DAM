@@ -2,6 +2,7 @@ package Programacion.Java.pokemon_RafaGalvan;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Pokedex {
 
@@ -10,6 +11,10 @@ public class Pokedex {
     public Pokedex(ArrayList<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
     }
+
+    public Pokedex(String filename) {
+
+    }    
 
     public ArrayList<Pokemon> getPokemonList() {
         return pokemonList;
@@ -21,19 +26,20 @@ public class Pokedex {
 
     public ArrayList<Pokemon> getUltimosPokemon() {
         ArrayList<Pokemon> latestPokemon = new ArrayList<>();
-        int numberOfLatestPokemon = 5;
-
-        if (pokemonList.size() <= numberOfLatestPokemon) {
+        int ultimosCinco = 5;
+    
+        if (pokemonList == null || pokemonList.size() <= ultimosCinco) {
             return pokemonList;
         }
-
-        for (int i = pokemonList.size() - 1; i >= pokemonList.size() - numberOfLatestPokemon; i--) {
+    
+        for (int i = pokemonList.size() - 1; i >= pokemonList.size() - ultimosCinco; i--) {
             latestPokemon.add(pokemonList.get(i));
         }
-
+    
         Collections.reverse(latestPokemon);
         return latestPokemon;
     }
+    
 
     public Pokemon getPokemonByName(String name) {
         for (Pokemon pokemon : pokemonList) {
@@ -58,15 +64,15 @@ public class Pokedex {
     }
 
     public ArrayList<Pokemon> getPokemonPorDebilidades(String weakness) {
-        ArrayList<Pokemon> pokemonByWeakness = new ArrayList<>();
+        ArrayList<Pokemon> pokemonPorDebilidades = new ArrayList<>();
 
         for (Pokemon pokemon : pokemonList) {
             if (pokemon.getWeaknesses().contains(weakness.toLowerCase())) {
-                pokemonByWeakness.add(pokemon);
+                pokemonPorDebilidades.add(pokemon);
             }
         }
 
-        return pokemonByWeakness;
+        return pokemonPorDebilidades;
     }
 
     public Pokemon getPokemonConMasDebilidades() {
@@ -100,5 +106,22 @@ public class Pokedex {
 
         return pokemonMasAlto;
     }
+    
+    public List<String> getPokemonEvolutions(String pokemonName) {
+        List<String> evolutions = new ArrayList<>();
+        Pokemon pokemon = null;
+        for (Pokemon p : pokemonList) {
+            if (p.getName().equalsIgnoreCase(pokemonName)) {
+                pokemon = p;
+                break;
+            }
+        }
+        if (pokemon == null) {
+            return evolutions; // No se encontró un Pokemon con ese nombre
+        }
+        return evolutions;
+    }
+    
+
 }
 

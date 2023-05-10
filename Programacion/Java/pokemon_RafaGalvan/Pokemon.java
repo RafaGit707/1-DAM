@@ -6,23 +6,19 @@ public class Pokemon {
     
     private String name;
     private String id;
-    private String height;
-    private String weight;
     private List<String> type;
     private List<String> weaknesses;
-    private String prev_evolution;
-    private String next_evolution;
-    
-    // Constructor
-    public Pokemon(String name, String id, String height, String weight, List<String> type, List<String> weaknesses, String prev_evolution, String next_evolution) {
+    private String height;
+    private String weight;
+    private List<String> evolutions;
+
+    public Pokemon(String name,  String id, List<String> type, List<String> weaknesses, String height, String weight, List<String> evolutions) {
         this.name = name;
-        this.id = id;
-        this.height = height;
-        this.weight = weight;
         this.type = type;
         this.weaknesses = weaknesses;
-        this.prev_evolution = prev_evolution;
-        this.next_evolution = next_evolution;
+        this.height = height;
+        this.weight = weight;
+        this.evolutions = evolutions;
     }
     
     // Getters and setters
@@ -74,19 +70,12 @@ public class Pokemon {
         this.weaknesses = weaknesses;
     }
 
-    public String getPrev_evolution() {
-        return prev_evolution;
+    public List<String> getEvolutions() {
+        return evolutions;
     }
 
-    public void setPrev_evolution(String prev_evolution) {
-        this.prev_evolution = prev_evolution;
+    public void setEvoluciones(List<String> evolutions) {
+        this.evolutions = evolutions;
     }
 
-    public String getNext_evolution() {
-        return next_evolution;
-    }
-
-    public void setNext_evolution(String next_evolution) {
-        this.next_evolution = next_evolution;
-    }
 }
