@@ -19,17 +19,16 @@
         <form class="form-container">
           <h1>Iniciar sesión</h1>
           <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" autocomplete="off" required>
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
           </div>
           <div class="form-group">
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" autocomplete="off" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?_])(?!\s)[a-zA-Z\d#$@!%&*?_]{8,16}$" required>
           </div>
-          <div id="error_message"></div>
           <button class="submit-btn" type="submit">Iniciar sesión</button>
           <p class="cuenta_p">¿No tienes cuenta?  <a href="#registro" class="registrarse">Registrarse</a></p>
-          <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X" id="X"></a>
+          <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X1" id="X1"></a>
         </form>
       </div>
     </div>
@@ -48,18 +47,28 @@
             <input type="email" id="email" name="email" autocomplete="off" required>
           </div>
           <div class="form-group">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" autocomplete="off" pattern="(?=.*[a-z])(?=.*[a-z])(?=.*\d)(?=.*[#$@!%&*?_])(?!\s)[a-zA-Z\d#$@!%&*?_]{8,16}$" required>
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
           </div>
-          <div id="error_message"></div>
+          <div class="form-group">
+            <label for="password2">Contraseña</label>
+            <input type="password" id="password2" name="password2" autocomplete="off" pattern="(?=.*[a-z])(?=.*[a-z])(?=.*\d)(?=.*[#$@!%&*?_])(?!\s)[a-zA-Z\d#$@!%&*?_]{8,16}$" required>
+          </div>
+          <div id="error_message">
+            <p class="message"><img class="X2" src="images/X.png" alt="X2" id="length-icon">La contraseña debe tener entre 8 y 16 caracteres</p>
+            <p class="message"><img class="X2" src="images/X.png" alt="X2" id="lowercase-icon">La contraseña debe contener al menos una letra minúscula</p>
+            <p class="message"><img class="X2" src="images/X.png" alt="X2" id="uppercase-icon">La contraseña debe contener al menos una letra mayúscula</p>
+            <p class="message"><img class="X2" src="images/X.png" alt="X2" id="number-icon">La contraseña debe contener al menos un número</p>
+            <p class="message"><img class="X2" src="images/X.png" alt="X2" id="special-char-icon">La contraseña debe contener al menos un carácter especial (#$@!%&amp;*?_)</p>
+          </div>
           <button class="submit-btn" type="submit">Registrarse</button>
           <p class="cuenta_p">¿Tienes cuenta? <a href="#mostrar" class="registrarse">Iniciar Sesion</a></p>
-          <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X" id="X"></a>
+          <a id="cerrar" class="cerrar" href="#"><img src="images/X-purple.png" class="X1" id="X1"></a>
         </form>
       </div>
     </div>
 
-    <script src="json/json.js"></script>
+    <script src="javascript/js.js"></script>
 
     <!--MENU TOPHEADER -->
 

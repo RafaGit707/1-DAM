@@ -112,11 +112,24 @@ body {
    transition-delay: 0.1s;
 }
 
-.X {
+.X1 {
    width: 25px;
    height: 25px;
    cursor: pointer;
 }
+
+.X2 {
+   width: 15px;
+   height: 15px;
+   margin-right: 5px;
+}
+
+.message {
+   display: flex;
+   margin-bottom: 5px;
+   align-items: center;
+}
+
 
 .cerrar {
    top: 0;

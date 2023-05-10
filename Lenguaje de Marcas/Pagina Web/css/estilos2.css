@@ -112,11 +112,24 @@ body {
    transition-delay: 0.1s;
 }
 
-.X {
+.X1 {
    width: 25px;
    height: 25px;
    cursor: pointer;
 }
+
+.X2 {
+   width: 15px;
+   height: 15px;
+   margin-right: 5px;
+}
+
+.message {
+   display: flex;
+   margin-bottom: 5px;
+   align-items: center;
+}
+
 
 .cerrar {
    top: 0;
@@ -160,6 +173,12 @@ body {
    transition-delay: 0.1s;
 }
 
+#error_message {
+   color: #FFFFFF;
+   margin-top: 18px;
+   margin-bottom: 20px;
+}
+
 .registrarse:hover {
    text-decoration-color: #FFFFFF;
 }
@@ -183,6 +202,7 @@ body {
 #cerrar:hover {
    transform: scale(1.2);
 }
+
 
 /*** MENU TOPHEADER ***/
 
