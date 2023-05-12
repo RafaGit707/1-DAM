@@ -5,12 +5,16 @@ import java.util.Map;
 
 public class EquipoFutbol {
 
-    private String nombreEquipo;
-    private Map<Integer, Jugador> plantilla;
+    private static String nombreEquipo;
+    private static Map<Integer, Jugador> plantilla;
 
     public EquipoFutbol(String nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;
+        EquipoFutbol.nombreEquipo = nombreEquipo;
         plantilla = new HashMap<>();
+    }    
+
+    public EquipoFutbol () {
+
     }
 
     public String getNombreEquipo() {
@@ -18,56 +22,61 @@ public class EquipoFutbol {
     }
 
     public void setNombreEquipo(String nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;
+        EquipoFutbol.nombreEquipo = nombreEquipo;
     }
 
     public Map<Integer, Jugador> getPlantilla() {
         return plantilla;
     }
 
-    public void setPlantilla(Map<Integer, Jugador> plantilla) {
-        this.plantilla = plantilla;
-    }
-
-    public void altaJugador(Integer dorsal) {
+    public static void altaJugador(Map<Integer, Jugador> plantilla, int dorsal) {
         Jugador jugador = new Jugador();
         jugador.introducirDatos();
         plantilla.put(dorsal, jugador);
     }
 
-    public void altaJugador(Integer dorsal, Jugador jugador) {
+    public static void altaJugador(Jugador jugador, int dorsal) {
         plantilla.put(dorsal, jugador);
     }
 
-    public Jugador eliminarJugador(Integer dorsal) {
-        return plantilla.remove(dorsal);
+    public static void eliminarJugador(Map<Integer, Jugador> plantilla, int dorsal) {
+        if (plantilla.containsKey(dorsal)) {
+            plantilla.remove(dorsal);
+            System.out.println("El jugador con dorsal " + dorsal + " ha sido eliminado.");
+        } else {
+            System.out.println("No se ha encontrado un jugador con el dorsal " + dorsal + ".");
+        }
     }
+    
 
-    public void mostrar() {
-        System.out.println("Plantilla del equipo " + nombreEquipo + ":");
+    public static void mostrar(Map<Integer, Jugador>plantilla) {
+        System.out.println("Plantilla del equipo " + EquipoFutbol.nombreEquipo + ":");
         for (Map.Entry<Integer, Jugador> entry : plantilla.entrySet()) {
             System.out.println("Dorsal: " + entry.getKey() + ", Jugador: " + entry.getValue().getNombre());
         }
     }
 
-    public void mostrar(String posicion) {
-        System.out.println("Plantilla del equipo " + nombreEquipo + " en la posición de " + posicion + ":");
-        for (Map.Entry<Integer, Jugador> entry : plantilla.entrySet()) {
-            if (entry.getValue().getPosicion().equals(posicion)) {
-                System.out.println("Dorsal: " + entry.getKey() + ", Jugador: " + entry.getValue().getNombre());
+    public static void mostrar(Map<Integer, Jugador> plantilla, Posicion posicion) {
+        System.out.println("Jugadores en la posición de " + posicion + ":");
+        for (Jugador jugador : plantilla.values()) {
+            if (jugador.getPosicion().equals(posicion)) {
+                System.out.println(jugador.toString());
             }
         }
     }
+    
 
-    public boolean editarJugador(Integer dorsal) {
-        Jugador jugador = plantilla.get(dorsal);
-        if (jugador != null) {
+    public static void editarJugador(Map<Integer, Jugador> plantilla, int dorsal) {
+        if (plantilla.containsKey(dorsal)) {
+            Jugador jugador = plantilla.get(dorsal);
             jugador.editarDatos();
-            return true;
+            System.out.println("Jugador actualizado:");
+            System.out.println(jugador);
         } else {
-            return false;
+            System.out.println("No se ha encontrado un jugador con el dorsal " + dorsal);
         }
     }
+    
 }
 
 

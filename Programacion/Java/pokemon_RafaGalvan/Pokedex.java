@@ -47,7 +47,6 @@ public class Pokedex {
                 return pokemon;
             }
         }
-
         return null;
     }
 

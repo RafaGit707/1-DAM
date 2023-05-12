@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
         Map<Integer, Jugador> plantilla = new HashMap<Integer, Jugador>();
         
         // Alta jugadores
@@ -15,7 +16,7 @@ public class Main {
         EquipoFutbol.altaJugador(plantilla, 6);
 
         // crea un objeto Integer a partir de un valor int
-        Integer dorsal = Integer.valueOf(5);
+        int dorsal = 5;
 
         // llama al método altaJugador con el objeto Integer como segundo argumento
         EquipoFutbol.altaJugador(plantilla, dorsal);
@@ -24,18 +25,22 @@ public class Main {
         System.out.println("Plantilla completa:");
         EquipoFutbol.mostrar(plantilla);
 
+        Jugador jugador = new Jugador();
+        EquipoFutbol.altaJugador(jugador, dorsal);
+
+
         // Mostrar jugadores por posición
         System.out.println("\nDefensas:");
-        EquipoFutbol.mostrar(plantilla, "defensa");
+        EquipoFutbol.mostrar(plantilla, Posicion.DEFENSA);
 
         System.out.println("\nCentrocampistas:");
-        EquipoFutbol.mostrar(plantilla, "centrocampista");
+        EquipoFutbol.mostrar(plantilla, Posicion.CENTROCAMPISTA);
 
         System.out.println("\nDelanteros:");
-        EquipoFutbol.mostrar(plantilla, "delantero");
+        EquipoFutbol.mostrar(plantilla, Posicion.DELANTERO);
 
         System.out.println("\nPorteros:");
-        EquipoFutbol.mostrar(plantilla, "portero");
+        EquipoFutbol.mostrar(plantilla, Posicion.PORTERO);
 
         // Editar jugador
         EquipoFutbol.editarJugador(plantilla, 1);
