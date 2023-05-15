@@ -23,12 +23,12 @@ public class Main {
                 opcion = Integer.parseInt(sc.nextLine());
                 switch (opcion) {
                     case 1:
-                        for (int i = 1; i <= 2; i++) {
+                        for (int i = 1; i <= 6; i++) {
                             System.out.println("Introduce los datos del jugador " + i + ":");
                             System.out.print("Dorsal: ");
                             int dorsal = sc.nextInt();
                             sc.nextLine();
-                        EquipoFutbol.altaJugador(plantilla, dorsal);
+                            EquipoFutbol.altaJugador(plantilla, dorsal);
                         }
                         break;
                     case 2:
