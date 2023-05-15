@@ -130,7 +130,6 @@ body {
    align-items: center;
 }
 
-
 .cerrar {
    top: 0;
    right: 12px;
@@ -225,10 +224,12 @@ body {
    list-style: none;
    color: #FFFFFF;
 }
+
 /* Establece la animación de desplazamiento */
 html {
   scroll-behavior: smooth;
 }
+
 .enlaces:hover {
    color: #5e3ad4;
 }
@@ -399,7 +400,6 @@ hr {
    margin-left: 8%;
    margin-right: 8%;
 }
-
 
 /*** SECTION SOBRE ***/
 
@@ -623,10 +623,10 @@ hr {
    zoom: 80%;
 }
 .contacto {
-   zoom: 75%;
+   zoom: 70%;
 }
 .footer {
-   zoom: 80%;
+   zoom: 70%;
 }
    
 }
@@ -666,10 +666,10 @@ hr {
    zoom: 70%;
 }
 .contacto {
-   zoom: 65%;
+   zoom: 60%;
 }
 .footer {
-   zoom: 70%;
+   zoom: 60%;
 }
    
 }
