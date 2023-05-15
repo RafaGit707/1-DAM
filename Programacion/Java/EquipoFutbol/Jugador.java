@@ -54,34 +54,6 @@ class Jugador {
         return "DNI: " + dni + ", Nombre: " + nombre + ", Posicion: " + posicion + ", Estatura: " + estatura;
     }
 
-    public void introducirDatos() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce el nombre del jugador:");
-        nombre = sc.nextLine();
-        System.out.println("Introduce la posición del jugador (portero, defensa, centrocampista, delantero):");
-        String posicionStr = sc.nextLine();
-        switch (posicionStr.toLowerCase()) {
-            case "portero":
-                posicion = Posicion.PORTERO;
-                break;
-            case "defensa":
-                posicion = Posicion.DEFENSA;
-                break;
-            case "centrocampista":
-                posicion = Posicion.CENTROCAMPISTA;
-                break;
-            case "delantero":
-                posicion = Posicion.DELANTERO;
-                break;
-            default:
-                System.out.println("Posición no válida. Se asignará la posición por defecto de defensa.");
-                posicion = Posicion.DEFENSA;
-                break;
-        }
-        System.out.println("Introduce la altura del jugador:");
-        estatura = sc.nextDouble();
-        sc.close();
-    }
     public void editarDatos() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el nuevo nombre del jugador:");
