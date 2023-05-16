@@ -1,4 +1,4 @@
-package Programacion.Java.pokemon_RafaGalvan;
+package Java.pokemon_RafaGalvan;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +13,7 @@ public class Pokedex {
     }
 
     public Pokedex(String filename) {
-
+        
     }    
 
     public ArrayList<Pokemon> getPokemonList() {

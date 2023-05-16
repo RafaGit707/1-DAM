@@ -1,4 +1,4 @@
-package Programacion.Java.pokemon_RafaGalvan;
+package Java.pokemon_RafaGalvan;
 
 import java.io.FileWriter;
 import java.io.IOException;
