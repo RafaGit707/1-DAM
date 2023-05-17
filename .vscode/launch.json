@@ -1,0 +1,665 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AcademiaLengua",
+            "request": "launch",
+            "mainClass": "Java.Academia.AcademiaLengua",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Bidimensional3",
+            "request": "launch",
+            "mainClass": "Java.Bidimensional3",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "DesordenarArray",
+            "request": "launch",
+            "mainClass": "Java.DesordenarArray",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.EX_T5.Ejercicio1_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.EX_T5.Ejercicio2_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.EX_T5.Ejercicio3_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ej1_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.Ej1_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ej2_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.Ej2_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ej3_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.Ej3_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "EjemploClase2",
+            "request": "launch",
+            "mainClass": "Java.EjemploClase2",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "EjemploClase3",
+            "request": "launch",
+            "mainClass": "Java.EjemploClase3",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "EjemploDoWhile",
+            "request": "launch",
+            "mainClass": "Java.EjemploDoWhile",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "EjemploSeleccion",
+            "request": "launch",
+            "mainClass": "Java.EjemploSeleccion",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer10_T5",
+            "request": "launch",
+            "mainClass": "Java.Ejer10_T5",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer15_T5",
+            "request": "launch",
+            "mainClass": "Java.Ejer15_T5",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer1_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.Ejer1_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer1_tablasDimensionales",
+            "request": "launch",
+            "mainClass": "Java.Ejer1_tablasDimensionales",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer2_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.Ejer2_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejer7_T5",
+            "request": "launch",
+            "mainClass": "Java.Ejer7_T5",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio1",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio10_2_45",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio10_2_45",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio10bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio10bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio12bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio12bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio18bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio18bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio19bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio19bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1_45",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio1_45",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1_RafaGalvan(1)",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio1_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1_concierto",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio1_concierto",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio2",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio20bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio20bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio23",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio23",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ajedrez",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio23_Colecciones.Ajedrez",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio26",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio26",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio26bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio26bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio28",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio28",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2_45",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio2_45",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2_RafaGalvan(1)",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio2_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2_granja",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio2_granja",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio3",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio30bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio30bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio32bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio32bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3_RafaGalvan(1)",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio3_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3_calculo",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio3_calculo",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio3bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio4_45",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio4_45",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio4_seleccion",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio4_seleccion",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio5_45",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio5_45",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio7bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio9bucles",
+            "request": "launch",
+            "mainClass": "Java.Ejercicio9bucles",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "EjermploArraySimpleNumerico",
+            "request": "launch",
+            "mainClass": "Java.EjermploArraySimpleNumerico",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Java.EquipoFutbol.Main",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ExArray_RafaGalvan_1",
+            "request": "launch",
+            "mainClass": "Java.ExArrayRecup.ExArray_RafaGalvan_1",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ExArray_RafaGalvan_2",
+            "request": "launch",
+            "mainClass": "Java.ExArrayRecup.ExArray_RafaGalvan_2",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ExArray_RafaGalvan_3",
+            "request": "launch",
+            "mainClass": "Java.ExArrayRecup.ExArray_RafaGalvan_3",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "UsoTienda",
+            "request": "launch",
+            "mainClass": "Java.ExamenColecciones_RafaGalvan.UsoTienda",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ExamenEj1",
+            "request": "launch",
+            "mainClass": "Java.ExamenEj1",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ExamenEj2",
+            "request": "launch",
+            "mainClass": "Java.ExamenEj2",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "FiguraGeometrica",
+            "request": "launch",
+            "mainClass": "Java.FiguraGeometrica",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ForBasico",
+            "request": "launch",
+            "mainClass": "Java.ForBasico",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "FrasePalindroma",
+            "request": "launch",
+            "mainClass": "Java.FrasePalindroma",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "FrioMijas",
+            "request": "launch",
+            "mainClass": "Java.FrioMIjas.FrioMijas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "Java.JsonJacksonExample.src.App",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "JugadoresSpain",
+            "request": "launch",
+            "mainClass": "Java.JugadorFutbol.JugadoresSpain",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Java.LecturaAlumnos_RafaGalvan.Main",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ManejoDeFechas",
+            "request": "launch",
+            "mainClass": "Java.ManejoDeFechas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Matrix",
+            "request": "launch",
+            "mainClass": "Java.Matrix.Matrix",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "MenuFrase_RafaGalvan",
+            "request": "launch",
+            "mainClass": "Java.MenuFrase_RafaGalvan",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "Java.Municipios.Main",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Notas",
+            "request": "launch",
+            "mainClass": "Java.Notas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "NumeroSecreto",
+            "request": "launch",
+            "mainClass": "Java.NumeroSecreto",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "PagaHijo",
+            "request": "launch",
+            "mainClass": "Java.PagaHijo",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "PartidoBaloncesto",
+            "request": "launch",
+            "mainClass": "Java.PartidoBaloncesto",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Partido_Baloncesto",
+            "request": "launch",
+            "mainClass": "Java.Partido_Baloncesto",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "trenes",
+            "request": "launch",
+            "mainClass": "Java.Trenes.trenes",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "UtilesArrayRafa",
+            "request": "launch",
+            "mainClass": "Java.UtilesArrayRafa",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "bingo",
+            "request": "launch",
+            "mainClass": "Java.bingo",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "cifrado",
+            "request": "launch",
+            "mainClass": "Java.cifrado",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "edades",
+            "request": "launch",
+            "mainClass": "Java.edades",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ejemploListas",
+            "request": "launch",
+            "mainClass": "Java.ejemploListas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "ejemploWhile",
+            "request": "launch",
+            "mainClass": "Java.ejemploWhile",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "exArrayResuelto_RafaGalvan_1",
+            "request": "launch",
+            "mainClass": "Java.exArrayResuelto_RafaGalvan_1",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "exArrayResuelto_RafaGalvan_2",
+            "request": "launch",
+            "mainClass": "Java.exArrayResuelto_RafaGalvan_2",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "exArrayResuelto_RafaGalvan_3",
+            "request": "launch",
+            "mainClass": "Java.exArrayResuelto_RafaGalvan_3",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "funcionesRecursivas",
+            "request": "launch",
+            "mainClass": "Java.funcionesRecursivas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "multiplos7",
+            "request": "launch",
+            "mainClass": "Java.multiplos7",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "pedir10nums",
+            "request": "launch",
+            "mainClass": "Java.pedir10nums",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "pilasYcolas",
+            "request": "launch",
+            "mainClass": "Java.pilasYcolas",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "piramideDeLetras",
+            "request": "launch",
+            "mainClass": "Java.piramideDeLetras",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "Java.pokemon_RafaGalvan.Main",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "rectangulo",
+            "request": "launch",
+            "mainClass": "Java.rectangulo",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "tablaMultiSimple",
+            "request": "launch",
+            "mainClass": "Java.tablaMultiSimple",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "tandaPenaltis",
+            "request": "launch",
+            "mainClass": "Java.tandaPenaltis",
+            "projectName": "1-DAM_770dd332"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio_CRUD",
+            "request": "launch",
+            "mainClass": "SQL.Ejercicio_CRUD",
+            "projectName": "1-DAM_770dd332"
+        }
+    ]
+}

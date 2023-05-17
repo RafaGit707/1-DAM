@@ -13,7 +13,7 @@ public class Pokedex {
     }
 
     public Pokedex(String filename) {
-        
+
     }    
 
     public ArrayList<Pokemon> getPokemonList() {

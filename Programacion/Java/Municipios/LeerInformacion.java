@@ -1,9 +1,7 @@
 package Java.Municipios;
 
-import java.beans.Statement;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,71 +10,41 @@ import java.util.Map;
 public class LeerInformacion {
 
     public static ArrayList<Municipio> LeerFicheroMunicipio(Integer año) {
+
         ArrayList<Municipio> municipios = new ArrayList<>();
         BufferedReader br = null;
+        FileReader fr = null;
+
         String line = "";
-        final String split1 = ";";
-        final String split2 = " ";
+        final String[] split2 = line.split(" ", 2);
+        final String[] split1 = split2[1].split(";");
     
-        // try {
-        //     br = new BufferedReader(new FileReader("../1-DAM/Programacion/Java/Municipios/PoblacionMunicipiosMalaga.csv"));
-        //     while ((line = br.readLine()) != null) {
-        //         String[] registro = line.split(split1);
-        //         String[] codPostal = registro[0].split(split2);
-                
-        //         // registro[0] = codPostal y el nombre
-        //         // registro[2] = año
-        //         // registro[3] = poblacion
-
-        //         if (año == null || (registro[2].matches("\\d+") && año.equals(Integer.parseInt(registro[2])))) {
-        //             if (registro[0].equals("Todos")) {
-        //                 Municipio m = new Municipio(codPostal[0], codPostal[1], Integer.parseInt(registro[2]), Integer.parseInt(registro[3]));
-        //                 municipios.add(m);
-        //             }
-        //         }
-        //     }
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // } finally {
-        //     if (br != null) {
-        //         try {
-        //             br.close();
-        //         } catch (IOException e) {
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // }
-
         try {
-            br = new BufferedReader(new FileReader("../1-DAM/Programacion/Java/Municipios/PoblacionMunicipiosMalaga.csv"));
-            br.readLine();
+            fr = new FileReader("../1-DAM/Programacion/Java/Municipios/PoblacionMunicipiosMalaga.csv");
+            br = new BufferedReader(fr);
+
             while ((line = br.readLine()) != null) {
-                String[] registro = line.split(split1);
-                String[] codPostal = registro[0].split(split2);
 
-                String codPostal2 = registro[0];
-                int edad = Integer.parseInt(registro[1]);
-                double estatura = Double.parseDouble(registro[2]);
-                int poblacion = Integer.parseInt(registro[3]);
+                String codPostal = split2[0];
+                String nombre = split1[0];
+                String sexo = split1[1];
+                int año1 = Integer.valueOf(split1[2]);
+                int poblacion = Integer.valueOf(split1[3].replace(".", ""));
 
-                if (año == null || (registro[2].matches("\\d+") && año.equals(Integer.parseInt(registro[2])))) {
-                    if (registro[0].equals("Todos")) {
-                        Municipio m = new Municipio(codPostal[0], codPostal[1], Integer.parseInt(registro[2]), Integer.parseInt(registro[3]));
-                        municipios.add(m);
-                    }
+                Municipio m = new Municipio(codPostal, nombre, año1, poblacion); 
+
+                if (sexo.equals("Todos")) {
+                    municipios.add(m);
                 }
+            
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        } catch (Exception e) {
+            e.getMessage();
         }
+            Collections.sort(municipios);
+            return municipios; // Devuelve la lista de municipios
+        }
+        
     
 
     public static Municipio BuscarMunicipio(ArrayList<Municipio> municipios, String nombre, Integer año) {
@@ -120,4 +88,3 @@ public class LeerInformacion {
     }
 
 }
-
