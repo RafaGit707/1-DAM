@@ -17,8 +17,12 @@ public class LeerInformacion {
 
         try {
 
-            String rutaArchivo = "../1-DAM/Programacion/Java/Municipios/PoblacionMunicipiosMalaga.csv";
+            String rutaArchivo = "PoblacionMunicipiosMalaga.csv";
             br = new BufferedReader(new FileReader(rutaArchivo));
+
+            if (rutaArchivo.isEmpty()) {
+                System.out.println("No se encontraron m.");
+            }
 
             String line = br.readLine();
             final String[] split1 = line.split(" ", 2);
