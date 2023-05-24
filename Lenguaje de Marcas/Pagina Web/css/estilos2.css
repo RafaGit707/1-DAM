@@ -449,6 +449,11 @@ html {
    text-align: center;
 }
 
+.p_contacto {
+   margin-top: 7px;
+   margin-bottom: 7px;
+}
+
  /*** FOOTER ***/
  
  .footer {

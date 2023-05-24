@@ -75,14 +75,6 @@ body {
    margin-bottom: 8px;
 }
 
-.form-group label {
-   display: block;
-   color: white;
-   font-size: 16px;
-   font-weight: 700;
-   margin-bottom: 8px;
-}
-
 .form-group input {
    background-color: transparent;
    border: none;
@@ -110,6 +102,34 @@ body {
    width: 100%;
    transition: background-color 0.25s ease-in-out;
    transition-delay: 0.1s;
+}
+
+.form-group input[type="email"]:invalid {
+   border-color: red;
+}
+
+.form-group input[type="email"]:valid {
+   border-color: green;
+}
+
+.form-group-politica {
+   display: inline;
+}
+
+.form-group-politica label { 
+   color: white;
+   font-size: 16px;
+   font-weight: 700;
+   margin-bottom: 8px;
+}
+
+.form-group-politica input {
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid white;
+   color: #ffffff;
+   font-size: 16px;
+   margin-bottom: 18px;
 }
 
 .X1 {
@@ -170,6 +190,9 @@ body {
    width: 100%;
    transition: background-color 0.25s ease-in-out;
    transition-delay: 0.1s;
+}
+.form-group-politica {
+   margin-bottom: 24px;
 }
 
 #error_message {
@@ -483,6 +506,11 @@ hr {
    padding-top: 7%;
    padding-bottom: 7%;
    text-align: center;
+}
+
+.p_contacto {
+   margin-top: 7px;
+   margin-bottom: 7px;
 }
 
 /*** FOOTER ***/
