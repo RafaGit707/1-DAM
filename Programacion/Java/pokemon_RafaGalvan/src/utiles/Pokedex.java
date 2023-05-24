@@ -1,8 +1,10 @@
-package Java.pokemon_RafaGalvan;
+package Java.pokemon_RafaGalvan.src.utiles;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import Java.pokemon_RafaGalvan.src.utiles.Pokedex;
 
 public class Pokedex {
 

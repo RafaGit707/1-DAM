@@ -1,0 +1,88 @@
+----- Los 5 ultimos pokemons según el listado -----
+(147) Dratini [Dragon] 1.80 m [Ice, Dragon, Fairy]
+(148) Dragonair [Dragon] 3.99 m [Ice, Dragon, Fairy]
+(149) Dragonite [Dragon, Flying] 2.21 m [Ice, Rock, Dragon, Fairy]
+(150) Mewtwo [Psychic] 2.01 m [Bug, Ghost, Dark]
+(151) Mew [Psychic] 0.41 m [Bug, Ghost, Dark]
+
+----- Datos de Pikachu -----
+(25) Pikachu [Electric] 0.41 m [Ground]
+
+
+----- Evolucion Charmander -----
+[5 Charmeleon, 6 Charizard]
+
+----- Pokemons de tipo fire -----
+(4) Charmander [Fire] 0.61 m [Water, Ground, Rock]
+(5) Charmeleon [Fire] 1.09 m [Water, Ground, Rock]
+(6) Charizard [Fire, Flying] 1.70 m [Water, Electric, Rock]
+(37) Vulpix [Fire] 0.61 m [Water, Ground, Rock]
+(38) Ninetales [Fire] 1.09 m [Water, Ground, Rock]
+(58) Growlithe [Fire] 0.71 m [Water, Ground, Rock]
+(59) Arcanine [Fire] 1.91 m [Water, Ground, Rock]
+(77) Ponyta [Fire] 0.99 m [Water, Ground, Rock]
+(78) Rapidash [Fire] 1.70 m [Water, Ground, Rock]
+(126) Magmar [Fire] 1.30 m [Water, Ground, Rock]
+(136) Flareon [Fire] 0.89 m [Water, Ground, Rock]
+(146) Moltres [Fire, Flying] 2.01 m [Water, Electric, Rock]
+
+
+----- Pokemons con debilidad water o electric -----
+(6) Charizard [Fire, Flying] 1.70 m [Water, Electric, Rock]
+(7) Squirtle [Water] 0.51 m [Electric, Grass]
+(8) Wartortle [Water] 0.99 m [Electric, Grass]
+(9) Blastoise [Water] 1.60 m [Electric, Grass]
+(12) Butterfree [Bug, Flying] 1.09 m [Fire, Electric, Ice, Flying, Rock]
+(16) Pidgey [Normal, Flying] 0.30 m [Electric, Rock]
+(17) Pidgeotto [Normal, Flying] 1.09 m [Electric, Rock]
+(18) Pidgeot [Normal, Flying] 1.50 m [Electric, Rock]
+(21) Spearow [Normal, Flying] 0.30 m [Electric, Rock]
+(22) Fearow [Normal, Flying] 1.19 m [Electric, Rock]
+(41) Zubat [Poison, Flying] 0.79 m [Electric, Ice, Psychic, Rock]
+(42) Golbat [Poison, Flying] 1.60 m [Electric, Ice, Psychic, Rock]
+(54) Psyduck [Water] 0.79 m [Electric, Grass]
+(55) Golduck [Water] 1.70 m [Electric, Grass]
+(60) Poliwag [Water] 0.61 m [Electric, Grass]
+(61) Poliwhirl [Water] 0.99 m [Electric, Grass]
+(62) Poliwrath [Water, Fighting] 1.30 m [Electric, Grass, Flying, Psychic, Fairy]
+(72) Tentacool [Water, Poison] 0.89 m [Electric, Ground, Psychic]
+(73) Tentacruel [Water, Poison] 1.60 m [Electric, Ground, Psychic]
+(79) Slowpoke [Water, Psychic] 1.19 m [Electric, Grass, Bug, Ghost, Dark]
+(80) Slowbro [Water, Psychic] 1.60 m [Electric, Grass, Bug, Ghost, Dark]
+(83) Farfetch'd [Normal, Flying] 0.79 m [Electric, Rock]
+(84) Doduo [Normal, Flying] 1.40 m [Electric, Rock]
+(85) Dodrio [Normal, Flying] 1.80 m [Electric, Rock]
+(86) Seel [Water] 1.09 m [Electric, Grass]
+(87) Dewgong [Water, Ice] 1.70 m [Electric, Grass, Fighting, Rock]
+(90) Shellder [Water] 0.30 m [Electric, Grass]
+(91) Cloyster [Water, Ice] 1.50 m [Electric, Grass, Fighting, Rock]
+(98) Krabby [Water] 0.41 m [Electric, Grass]
+(99) Kingler [Water] 1.30 m [Electric, Grass]
+(116) Horsea [Water] 0.41 m [Electric, Grass]
+(117) Seadra [Water] 1.19 m [Electric, Grass]
+(118) Goldeen [Water] 0.61 m [Electric, Grass]
+(119) Seaking [Water] 1.30 m [Electric, Grass]
+(120) Staryu [Water] 0.79 m [Electric, Grass]
+(121) Starmie [Water, Psychic] 1.09 m [Electric, Grass, Bug, Ghost, Dark]
+(123) Scyther [Bug, Flying] 1.50 m [Fire, Electric, Ice, Flying, Rock]
+(129) Magikarp [Water] 0.89 m [Electric, Grass]
+(130) Gyarados [Water, Flying] 6.50 m [Electric, Rock]
+(131) Lapras [Water, Ice] 2.49 m [Electric, Grass, Fighting, Rock]
+(134) Vaporeon [Water] 0.99 m [Electric, Grass]
+(138) Omanyte [Rock, Water] 0.41 m [Electric, Grass, Fighting, Ground]
+(139) Omastar [Rock, Water] 0.99 m [Electric, Grass, Fighting, Ground]
+(140) Kabuto [Rock, Water] 0.51 m [Electric, Grass, Fighting, Ground]
+(141) Kabutops [Rock, Water] 1.30 m [Electric, Grass, Fighting, Ground]
+(142) Aerodactyl [Rock, Flying] 1.80 m [Water, Electric, Ice, Rock, Steel]
+(144) Articuno [Ice, Flying] 1.70 m [Fire, Electric, Rock, Steel]
+(146) Moltres [Fire, Flying] 2.01 m [Water, Electric, Rock]
+
+
+----- Pokemon con mas debilidades -----
+(102) Exeggcute [Grass, Psychic] 0.41 m [Fire, Ice, Poison, Flying, Bug, Ghost, Dark]
+
+
+----- Pokemon más alto -----
+(95) Onix [Rock, Ground] 8.79 m [Water, Grass, Ice, Fighting, Ground, Steel]
+
+

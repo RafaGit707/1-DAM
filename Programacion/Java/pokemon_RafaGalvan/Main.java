@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Java.pokemon_RafaGalvan.src.utiles.Pokemon;
+import Java.pokemon_RafaGalvan.src.utiles.Pokedex;
+
 public class Main {
 
     public static void main(String[] args) {
