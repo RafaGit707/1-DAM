@@ -6,14 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.ObjectMapper;
-
 import utiles.Ciclista;
 
 public class Main {
     public static void main(String[] args) {
         // Cargar datos de los archivos CSV y JSON
-        List<Ciclista> ciclistas = cargarCiclistasDeJson("Ciclistas.json");
+        List<Ciclista> ciclistas = cargarCiclistasDeJson("ciclistas.json");
         String nombreCarrera = "Vuelta a Málaga";
 
         Carrera carrera = new Carrera(ciclistas, nombreCarrera);

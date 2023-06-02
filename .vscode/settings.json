@@ -1,4 +1,14 @@
 {
     "liveServer.settings.port": 5501,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.sourcePaths": [
+        "Programacion/Java/Ciclistas_RafaGalvan/src",
+        "Programacion/Java/Ciclistas_RafaGalvan"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Programacion/Java/Ciclistas_RafaGalvan/lib/jackson-annotations-2.14.2.jar",
+        "Programacion/Java/Ciclistas_RafaGalvan/lib/jackson-core-2.14.2.jar",
+        "Programacion/Java/Ciclistas_RafaGalvan/lib/jackson-databind-2.14.2.jar"
+    ]
 }
